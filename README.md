@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prince Iranzi - Professional Portfolio
 
-## Getting Started
+A modern, responsive portfolio website showcasing software engineering and digital marketing expertise.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[View Portfolio](https://princeiranzi4.github.io/my-portfolio) *(Deploy when ready)*
+
+## 📋 Overview
+
+This portfolio website represents Prince Iranzi's professional work as a Software Engineer & Digital Marketer. Built with modern web technologies, it features a clean, responsive design with dark/light theme support.
+
+## ✨ Features
+
+- **Responsive Design** - Optimized for all devices
+- **Theme Switching** - Light/Dark mode toggle
+- **Project Showcase** - Interactive project gallery with live demos
+- **Contact Form** - Integrated email system with auto-reply
+- **SEO Optimized** - Meta tags, sitemap, and OpenGraph support
+- **Performance Focused** - Fast loading with Next.js optimization
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **UI Components:** shadcn/ui
+- **Animations:** Framer Motion
+- **Email:** Nodemailer with Gmail SMTP
+- **Testing:** Vitest + Playwright
+- **Deployment:** Vercel Ready
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                 # Next.js App Router pages
+├── components/          # Reusable UI components
+├── data/               # Content and configuration
+├── lib/                # Utilities and helpers
+└── public/             # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+ 
+- npm or pnpm
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+```bash
+# Clone the repository
+git clone https://github.com/iranziprince01/my-portfolio.git
 
-To learn more about Next.js, take a look at the following resources:
+# Navigate to project directory
+cd my-portfolio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Install dependencies
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Set up environment variables
+cp .env.example .env.local
+# Add your email credentials to .env.local
 
-## Deploy on Vercel
+# Run development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Visit [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📧 Contact Integration
+
+The contact form is integrated with Gmail SMTP for professional client inquiries:
+
+- **Email:** princeiranzi4@gmail.com
+- **Phone:** +250785961427
+- **Auto-reply:** Confirmation emails sent to clients
+
+## 🎯 Services Offered
+
+- **Web Applications:** $400-$800
+- **Mobile Apps:** $1000-$1500  
+- **PWA Development:** $500-$1000
+- **Digital Marketing:** $200-$800
+
+## 📱 Key Projects
+
+- **TekRiders** - Multi-platform transportation app
+- **PPEA** - Legal firm website
+- **MindSafi** - Mental health platform
+- **BookHub** - Academic resource platform
+- **Fitness Booking** - Gym management system
+
+## 🧪 Testing
+
+```bash
+# Run unit tests
+npm test
+
+# Run e2e tests
+npm run test:e2e
+```
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contact
+
+**Prince Iranzi**
+- Email: princeiranzi4@gmail.com
+- Phone: +250785961427
+- LinkedIn: [prince-iranzi](https://linkedin.com/in/prince-iranzi)
+- GitHub: [iranziprince01](https://github.com/iranziprince01)
+
+---
+
+*Built with ❤️ by Prince Iranzi*
