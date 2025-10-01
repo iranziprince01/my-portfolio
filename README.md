@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing software engineering and digit
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://princeiranzi4.github.io/my-portfolio) *(Deploy when ready)*
+[View Portfolio](https://my-portfolio-ten-ruddy-89.vercel.app/) *(Deploy when ready)*
 
 ## 📋 Overview
 
