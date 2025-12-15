@@ -128,6 +128,7 @@ export function ProjectsClient() {
                 <Image
                   src={
                     project.slug === 'tekriders' ? '/tekriders.png' :
+                    project.slug === 'iarm-ministries' ? '/iarm.png' :
                     project.slug === 'graphic-design-work' ? '/graphics-sowc.png' :
                     project.slug === 'ppea-law' ? '/PPEA.png' :
                     project.slug === 'mindsafi' ? '/mindsafi.png' :
@@ -139,6 +140,7 @@ export function ProjectsClient() {
                     project.slug === 'skillhub' ? '/skillhub.png' :
                     project.slug === 'github-academics' ? '/academic-projects.png' :
                     project.slug === 'honnette-portfolio' ? '/honnette.png' :
+                    project.slug === 'patrick-portfolio' ? '/Patrick.png' :
                     '/images/projects/placeholder.jpg'
                   }
                   alt={project.title}

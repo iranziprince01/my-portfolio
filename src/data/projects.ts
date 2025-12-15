@@ -44,6 +44,22 @@ export const projects: Project[] = [
     results: ["Successfully deployed and tested with 50+ learners", "Achieved 95% offline functionality", "Reduced data usage by 60% through intelligent caching"]
   },
   {
+    title: "International Anglican Revival Ministries – Church Website",
+    slug: "iarm-ministries",
+    summary: "Ministry site for IARM in Edmonton, outlining service times, ministries, and donation options for a multicultural congregation.",
+    tags: ["Web", "Nonprofit", "Ministry"],
+    role: "Frontend & content integration",
+    year: 2025,
+    links: {
+      github: "https://github.com/iranziprince01/IARM",
+      live: "https://www.iarmministries.org/",
+    },
+    images: ["/iarm.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: ["Clear service times and ministry overview", "Donation and contact calls-to-action", "Bilingual-friendly content for English and Kinyarwanda visitors"],
+    outcomes: ["Improved digital presence for a multicultural church community", "Centralized information for worship schedules and outreach programs"]
+  },
+  {
     title: "Graphic Design Work (ALU, School of Wildlife Conservation)",
     slug: "graphic-design-work",
     summary: "Professional graphic design work for ALU and School of Wildlife Conservation, including branding, event materials, and promotional graphics.",
@@ -216,6 +232,29 @@ export const projects: Project[] = [
     tech: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Font Awesome"],
     highlights: ["Responsive design", "Glass morphism effects", "Interactive timeline", "Women empowerment focus"],
     outcomes: ["Showcased client's impact in women empowerment", "Professional portfolio presentation", "Mobile-first responsive design"]
+  },
+  {
+    title: "Patrick Iranzi – Personal Leadership Portfolio",
+    slug: "patrick-portfolio",
+    summary: "Personal portfolio highlighting leadership journey, key artifacts, and experiences as an ALU student and emerging entrepreneur.",
+    tags: ["Web", "Portfolio"],
+    role: "Frontend Developer",
+    year: 2025,
+    links: {
+      github: "https://github.com/iranziprince01/patrick-portfolio",
+      live: "https://patrick-portfolio-theta.vercel.app/",
+    },
+    images: ["/Patrick.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    highlights: [
+      "Timeline of leadership milestones and key artifacts",
+      "Clean, reader-friendly layout focused on story and impact",
+      "Responsive design optimized for mobile and desktop"
+    ],
+    outcomes: [
+      "Showcases Patrick's leadership journey and core competencies",
+      "Provides a professional link for applications and networking"
+    ]
   }
 ];
 
