@@ -108,6 +108,7 @@ export default function Home() {
                   <Image
                     src={
                       project.slug === 'tekriders' ? '/tekriders.png' :
+                      project.slug === 'iarm-ministries' ? '/iarm.png' :
                       project.slug === 'graphic-design-work' ? '/graphics-sowc.png' :
                       project.slug === 'ppea-law' ? '/PPEA.png' :
                       project.slug === 'mindsafi' ? '/mindsafi.png' :
