@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Search, Filter, X } from "lucide-react";
+import { ArrowRight, Search, Filter, X, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
 const allTags = Array.from(new Set(projects.flatMap(project => project.tags))).sort();
@@ -44,28 +44,28 @@ export function ProjectsClient() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Search and Filters */}
       <div className="space-y-4">
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search projects by name, description, or technology..."
+              placeholder="Search projects..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10"
+              className="pl-10 h-10 border-border/50 focus:border-primary/50"
             />
           </div>
           <Button
             variant="outline"
             onClick={() => setShowFilters(!showFilters)}
-            className="sm:w-auto"
+            className="sm:w-auto h-10 border-border/50 hover:border-primary/50"
           >
             <Filter className="h-4 w-4 mr-2" />
             Filters
             {selectedTags.length > 0 && (
-              <Badge variant="secondary" className="ml-2">
+              <Badge variant="secondary" className="ml-2 text-xs px-1.5 py-0">
                 {selectedTags.length}
               </Badge>
             )}
@@ -74,14 +74,14 @@ export function ProjectsClient() {
 
         {/* Filter Tags */}
         {showFilters && (
-          <div className="space-y-4 p-4 border rounded-lg bg-muted/30">
+          <div className="space-y-4 p-5 border border-border/50 rounded-lg bg-muted/20 backdrop-blur-sm">
             <div className="flex items-center justify-between">
-              <h3 className="font-medium">Filter by tags</h3>
+              <h3 className="font-semibold text-sm">Filter by tags</h3>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={clearFilters}
-                className="text-muted-foreground"
+                className="text-muted-foreground hover:text-foreground h-8 text-xs"
               >
                 Clear all
               </Button>
@@ -93,11 +93,15 @@ export function ProjectsClient() {
                   variant={selectedTags.includes(tag) ? "default" : "outline"}
                   size="sm"
                   onClick={() => toggleTag(tag)}
-                  className="h-8"
+                  className={`h-8 text-xs transition-all ${
+                    selectedTags.includes(tag) 
+                      ? "bg-primary hover:bg-primary/90" 
+                      : "border-border/50 hover:border-primary/50"
+                  }`}
                 >
                   {tag}
                   {selectedTags.includes(tag) && (
-                    <X className="h-3 w-3 ml-1" />
+                    <X className="h-3 w-3 ml-1.5" />
                   )}
                 </Button>
               ))}
@@ -107,12 +111,12 @@ export function ProjectsClient() {
       </div>
 
       {/* Results Count */}
-      <div className="flex items-center justify-between">
-        <p className="text-muted-foreground">
+      <div className="flex items-center justify-between py-2">
+        <p className="text-sm text-muted-foreground font-medium">
           {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''} found
         </p>
         {(searchQuery || selectedTags.length > 0) && (
-          <Button variant="ghost" size="sm" onClick={clearFilters}>
+          <Button variant="ghost" size="sm" onClick={clearFilters} className="text-xs h-8">
             Clear filters
           </Button>
         )}
@@ -120,11 +124,11 @@ export function ProjectsClient() {
 
       {/* Projects Grid */}
       {filteredProjects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
-            <Card key={project.slug} className="group hover:shadow-lg transition-all duration-200 overflow-hidden">
-              {/* Project Thumbnail */}
-              <div className="relative h-48 bg-muted/30 overflow-hidden">
+            <Card key={project.slug} className="group h-full flex flex-col overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-xl bg-card/50 backdrop-blur-sm pt-0">
+              {/* Project Thumbnail - flush to top */}
+              <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-xl">
                 <Image
                   src={
                     project.slug === 'tekriders' ? '/tekriders.png' :
@@ -145,89 +149,84 @@ export function ProjectsClient() {
                   }
                   alt={project.title}
                   fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Year Badge */}
+                <div className="absolute top-3 left-3 z-10">
+                  <Badge className="bg-background/90 backdrop-blur-md text-foreground border border-border/50 shadow-sm text-xs font-medium px-2.5 py-0.5">
+                    {project.year}
+                  </Badge>
+                </div>
               </div>
               
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <Badge variant="secondary">{project.year}</Badge>
-                  <div className="flex gap-1 flex-wrap">
-                    {project.tags.slice(0, 2).map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
+              <CardContent className="p-5 flex-1 flex flex-col">
+                {/* Header Section */}
+                <div className="mb-4">
+                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors font-display leading-tight line-clamp-2">
+                    {project.title}
+                  </h3>
+
+                  {/* Tags - Compact */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.slice(0, 3).map((tag) => (
+                      <Badge 
+                        key={tag} 
+                        variant="outline" 
+                        className="text-[10px] px-2 py-0.5 border-primary/15 text-muted-foreground hover:border-primary/30 hover:text-foreground transition-colors"
+                      >
                         {tag}
                       </Badge>
                     ))}
-                    {project.tags.length > 2 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{project.tags.length - 2}
-                      </Badge>
-                    )}
                   </div>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-muted-foreground mb-4 line-clamp-3">
-                  {project.summary}
-                </p>
 
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Role</span>
-                    <span className="font-medium">{project.role}</span>
-                  </div>
+                {/* Role Section */}
+                <div className="mt-auto pt-4 border-t border-border/50">
+                  <p className="text-xs text-muted-foreground mb-4 font-medium uppercase tracking-wider">
+                    {project.role}
+                  </p>
                   
-                  <div className="flex flex-wrap gap-1">
-                    {project.tech.slice(0, 3).map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                    {project.tech.length > 3 && (
-                      <Badge variant="secondary" className="text-xs">
-                        +{project.tech.length - 3} more
-                      </Badge>
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between mt-6">
+                  {/* Action Buttons - Equal Size */}
                   <div className="flex gap-2">
-                    {project.links.github && (
-                      <Button asChild variant="ghost" size="sm">
+                    {(project.links.live || project.links.demo) ? (
+                      <Button
+                        asChild
+                        className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-xs h-9 shadow-sm hover:shadow-md transition-all"
+                      >
                         <a
-                          href={project.links.github}
+                          href={project.links.live || project.links.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs"
+                          className="flex items-center justify-center gap-1.5"
                         >
-                          GitHub
-                        </a>
-                      </Button>
-                    )}
-                    {project.links.live && (
-                      <Button asChild variant="ghost" size="sm">
-                        <a
-                          href={project.links.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs"
-                        >
+                          <ExternalLink className="h-3.5 w-3.5" />
                           Live Demo
                         </a>
                       </Button>
+                    ) : (
+                      <Button
+                        disabled
+                        className="flex-1 opacity-40 cursor-not-allowed text-xs h-9"
+                        variant="outline"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                        Unavailable
+                      </Button>
                     )}
+                    <Button 
+                      asChild 
+                      variant="outline" 
+                      className="flex-1 border border-border/50 hover:border-primary/50 text-xs h-9 font-medium"
+                    >
+                      <Link href={`/projects/${project.slug}`} className="flex items-center justify-center gap-1.5">
+                        More Details
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </Button>
                   </div>
-                  <Button asChild variant="ghost" size="sm">
-                    <Link href={`/projects/${project.slug}`}>
-                      View Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
                 </div>
               </CardContent>
             </Card>

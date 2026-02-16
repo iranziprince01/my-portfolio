@@ -12,55 +12,80 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Experience", href: "/experience" },
-  { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
     setMounted(true)
+    if (typeof window !== 'undefined') {
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 20)
+      }
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header
+      className={`sticky top-0 z-50 w-full border-b border-border/60 bg-muted/70 dark:bg-muted/50 backdrop-blur-md text-foreground transition-colors ${
+        scrolled ? "shadow-sm" : ""
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-foreground">
+            <Link href="/" className="text-xl font-bold text-foreground font-display hover:text-primary transition-colors">
               Prince Iranzi
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  mounted && pathname === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          {/* Desktop Navigation - Moved to right */}
+          <div className="hidden md:flex items-center gap-4 text-foreground">
+            <nav className="flex items-center space-x-1">
+              {navigation.map((item) => {
+                const isActive = mounted && pathname === item.href
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="relative px-4 py-2 text-sm font-medium transition-colors"
+                  >
+                    <span
+                      className={`relative z-10 ${
+                        isActive ? "text-primary font-semibold" : "text-foreground hover:text-primary"
+                      }`}
+                    >
+                      {item.name}
+                    </span>
+                    {isActive && (
+                      <div className="absolute inset-0 bg-primary/10 rounded-lg" />
+                    )}
+                  </Link>
+                )
+              })}
+            </nav>
+            
+            {/* Theme Toggle */}
+            <ThemeToggle />
+          </div>
 
-          {/* Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-2">
+          {/* Mobile Menu Button */}
+          <div className="flex items-center gap-2 md:hidden text-foreground">
             <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+              className="text-foreground hover:text-primary hover:bg-primary/10"
             >
               {mobileMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -74,21 +99,24 @@ export function Header() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
-                    mounted && pathname === item.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-border">
+              {navigation.map((item) => {
+                const isActive = mounted && pathname === item.href
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`block px-3 py-2 text-base font-medium transition-colors rounded-lg ${
+                      isActive
+                        ? "text-primary bg-primary/10"
+                        : "text-foreground hover:text-primary hover:bg-muted"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              })}
             </div>
           </div>
         )}

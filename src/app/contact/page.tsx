@@ -8,8 +8,7 @@ import {
   Phone,
   Clock, 
   Github, 
-  Linkedin,
-  ExternalLink
+  Linkedin
 } from "lucide-react";
 import { generatePageSEO } from "@/lib/seo";
 
@@ -141,23 +140,6 @@ export default function ContactPage() {
                   </a>
                 </Button>
               </div>
-            </div>
-
-            {/* Resume */}
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Download Resume
-              </h3>
-              <Button asChild variant="outline" size="lg">
-                <a
-                  href="https://docs.google.com/document/d/13dbqlzTmFgiQJVOGmOCjCytSYYhHs_xRhJ0CWgw3Gpg/edit?tab=t.0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="h-5 w-5 mr-2" />
-                  View Resume
-                </a>
-              </Button>
             </div>
           </div>
         </div>

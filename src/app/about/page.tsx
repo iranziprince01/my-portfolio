@@ -10,8 +10,7 @@ import {
   Award, 
   Users, 
   Target,
-  CheckCircle,
-  ExternalLink
+  CheckCircle
 } from "lucide-react";
 import { skillsByCategory } from "@/data/skills";
 import { generatePageSEO } from "@/lib/seo";
@@ -89,7 +88,7 @@ export default function AboutPage() {
                   <h3 className="font-semibold">Experience</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  3+ years in software development and digital marketing
+                  4+ years in software development and digital marketing
                 </p>
               </Card>
               <Card className="p-6">
@@ -203,16 +202,6 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
               <a href="/contact">Get In Touch</a>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a 
-                href="https://docs.google.com/document/d/13dbqlzTmFgiQJVOGmOCjCytSYYhHs_xRhJ0CWgw3Gpg/edit?tab=t.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Resume
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
             </Button>
           </div>
         </section>
