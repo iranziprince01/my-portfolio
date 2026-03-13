@@ -131,6 +131,8 @@ export function ProjectsClient() {
               <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-xl">
                 <Image
                   src={
+                    project.slug === 'talent-bridge-africa' ? '/Talent Bridge Africa.png' :
+                    project.slug === 'byishimo-patrick-artist' ? '/patrick_byishimo.png' :
                     project.slug === 'tekriders' ? '/tekriders.png' :
                     project.slug === 'iarm-ministries' ? '/iarm.png' :
                     project.slug === 'graphic-design-work' ? '/graphics-sowc.png' :
@@ -145,7 +147,8 @@ export function ProjectsClient() {
                     project.slug === 'github-academics' ? '/academic-projects.png' :
                     project.slug === 'honnette-portfolio' ? '/honnette.png' :
                     project.slug === 'patrick-portfolio' ? '/Patrick.png' :
-                    '/images/projects/placeholder.jpg'
+                    // Fallback to a known existing image instead of a missing placeholder
+                    '/tekriders.png'
                   }
                   alt={project.title}
                   fill

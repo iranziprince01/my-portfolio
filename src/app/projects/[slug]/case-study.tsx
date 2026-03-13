@@ -16,6 +16,8 @@ interface CaseStudyProps {
 export function CaseStudy({ project }: CaseStudyProps) {
   const getProjectImage = (slug: string) => {
     const imageMap: Record<string, string> = {
+      'talent-bridge-africa': '/Talent Bridge Africa.png',
+      'byishimo-patrick-artist': '/patrick_byishimo.png',
       'tekriders': '/tekriders.png',
       'iarm-ministries': '/iarm.png',
       'graphic-design-work': '/graphics-sowc.png',
@@ -30,7 +32,8 @@ export function CaseStudy({ project }: CaseStudyProps) {
       'github-academics': '/academic-projects.png',
       'honnette-portfolio': '/honnette.png',
     }
-    return imageMap[slug] || '/images/projects/placeholder.jpg'
+    // Fallback to a known existing project image
+    return imageMap[slug] || '/tekriders.png'
   }
 
   return (

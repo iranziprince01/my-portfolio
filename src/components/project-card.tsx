@@ -17,6 +17,8 @@ interface ProjectCardProps {
 
 const getProjectImage = (slug: string) => {
   const imageMap: Record<string, string> = {
+    'talent-bridge-africa': '/Talent Bridge Africa.png',
+    'byishimo-patrick-artist': '/patrick_byishimo.png',
     'tekriders': '/tekriders.png',
     'iarm-ministries': '/iarm.png',
     'graphic-design-work': '/graphics-sowc.png',
@@ -31,7 +33,8 @@ const getProjectImage = (slug: string) => {
     'github-academics': '/academic-projects.png',
     'honnette-portfolio': '/honnette.png',
   }
-  return imageMap[slug] || '/images/projects/placeholder.jpg'
+  // Fallback to a known existing image if slug is not mapped
+  return imageMap[slug] || '/tekriders.png'
 }
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {

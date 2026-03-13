@@ -23,7 +23,51 @@ export const ProjectSchema = z.object({
 
 export type Project = z.infer<typeof ProjectSchema>;
 
-export const projects: Project[] = [
+const rawProjects: Project[] = [
+  {
+    title: "Talent Bridge Africa – Student Talent Studio",
+    slug: "talent-bridge-africa",
+    summary: "Student-powered talent studio connecting African students, graduates, and refugee youth with growing businesses that need flexible digital talent.",
+    tags: ["Web", "Talent Platform"],
+    role: "Full-stack Developer",
+    year: 2026,
+    links: {
+      live: "https://talent-bridge-africa.vercel.app/",
+    },
+    images: ["/Talent Bridge Africa.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: [
+      "Landing page clearly explaining the student talent studio model",
+      "Sections tailored for both businesses and students with clear CTAs",
+      "Responsive layout optimized for mobile and desktop visitors"
+    ],
+    outcomes: [
+      "Provides a professional digital home for Talent Bridge Africa",
+      "Helps connect students, graduates, and refugee youth with real client work"
+    ]
+  },
+  {
+    title: "Byishimo Patrick – Gospel Artist Portfolio",
+    slug: "byishimo-patrick-artist",
+    summary: "Official portfolio for gospel artist Patrick Byishimo, showcasing music, ministry story, events, and contact information.",
+    tags: ["Web", "Artist Portfolio"],
+    role: "Frontend Developer",
+    year: 2026,
+    links: {
+      live: "https://www.byishimomusic.com/",
+    },
+    images: ["/patrick_byishimo.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: [
+      "Hero section centered on artist identity and latest releases",
+      "Structured sections for music, events, and ministry impact",
+      "Clean, responsive design suitable for fans, event organizers, and churches"
+    ],
+    outcomes: [
+      "Gives Patrick a professional online presence as a gospel artist",
+      "Supports bookings and engagement with audiences in Edmonton and beyond"
+    ]
+  },
   {
     title: "TekRiders – Offline-first PWA E-Learning Platform",
     slug: "tekriders",
@@ -257,6 +301,8 @@ export const projects: Project[] = [
     ]
   }
 ];
+
+export const projects: Project[] = rawProjects.sort((a, b) => b.year - a.year);
 
 // Validate all projects
 projects.forEach((project, index) => {
