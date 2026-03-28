@@ -18,6 +18,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
     const imageMap: Record<string, string> = {
       'talent-bridge-africa': '/Talent Bridge Africa.png',
       'byishimo-patrick-artist': '/patrick_byishimo.png',
+      'fati-sango-portfolio': '/sango.png',
       'tekriders': '/tekriders.png',
       'iarm-ministries': '/iarm.png',
       'graphic-design-work': '/graphics-sowc.png',

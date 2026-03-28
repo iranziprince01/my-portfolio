@@ -133,6 +133,7 @@ export function ProjectsClient() {
                   src={
                     project.slug === 'talent-bridge-africa' ? '/Talent Bridge Africa.png' :
                     project.slug === 'byishimo-patrick-artist' ? '/patrick_byishimo.png' :
+                    project.slug === 'fati-sango-portfolio' ? '/sango.png' :
                     project.slug === 'tekriders' ? '/tekriders.png' :
                     project.slug === 'iarm-ministries' ? '/iarm.png' :
                     project.slug === 'graphic-design-work' ? '/graphics-sowc.png' :

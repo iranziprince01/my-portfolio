@@ -69,6 +69,31 @@ const rawProjects: Project[] = [
     ]
   },
   {
+    title: "Fati Sango Portfolio",
+    slug: "fati-sango-portfolio",
+    summary:
+      "Portfolio website for Fati Sango, social entrepreneur and business analyst: professional story, positioning, and impact online.",
+    tags: ["Web", "Portfolio"],
+    role: "Full-stack Developer",
+    year: 2026,
+    links: {
+      live: "https://sango-portfolio.vercel.app/",
+    },
+    images: ["/sango.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: [
+      "Clear positioning as a social entrepreneur and business analyst",
+      "Responsive layout with strong visual hierarchy",
+      "Deployed on Vercel for fast, reliable delivery"
+    ],
+    outcomes: [
+      "A dedicated professional presence for Fati Sango's work and impact",
+      "Makes it easy for visitors to explore background and connect"
+    ],
+    description:
+      "A modern portfolio showcasing Fati Sango's work as a social entrepreneur and business analyst, with sections tailored to story, expertise, and audience engagement."
+  },
+  {
     title: "TekRiders - Offline-first PWA E-Learning Platform",
     slug: "tekriders",
     summary: "Offline-first PWA for marginalized youth (Rwanda). Caches course metadata and supports sync between PouchDB (client) and CouchDB (server).",
