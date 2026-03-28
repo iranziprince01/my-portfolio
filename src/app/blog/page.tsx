@@ -43,7 +43,7 @@ const blogPosts = [
 export default function BlogPage() {
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-4xl">
+      <div className="site-content">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">

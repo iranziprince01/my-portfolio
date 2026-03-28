@@ -21,7 +21,7 @@ export const metadata: Metadata = generatePageSEO(
 export default function ContactPage() {
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-6xl">
+      <div className="site-content">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">

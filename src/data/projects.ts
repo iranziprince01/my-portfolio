@@ -25,7 +25,7 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 const rawProjects: Project[] = [
   {
-    title: "Talent Bridge Africa – Student Talent Studio",
+    title: "Talent Bridge Africa - Student Talent Studio",
     slug: "talent-bridge-africa",
     summary: "Student-powered talent studio connecting African students, graduates, and refugee youth with growing businesses that need flexible digital talent.",
     tags: ["Web", "Talent Platform"],
@@ -47,7 +47,7 @@ const rawProjects: Project[] = [
     ]
   },
   {
-    title: "Byishimo Patrick – Gospel Artist Portfolio",
+    title: "Byishimo Patrick - Gospel Artist Portfolio",
     slug: "byishimo-patrick-artist",
     summary: "Official portfolio for gospel artist Patrick Byishimo, showcasing music, ministry story, events, and contact information.",
     tags: ["Web", "Artist Portfolio"],
@@ -69,7 +69,7 @@ const rawProjects: Project[] = [
     ]
   },
   {
-    title: "TekRiders – Offline-first PWA E-Learning Platform",
+    title: "TekRiders - Offline-first PWA E-Learning Platform",
     slug: "tekriders",
     summary: "Offline-first PWA for marginalized youth (Rwanda). Caches course metadata and supports sync between PouchDB (client) and CouchDB (server).",
     tags: ["Web App", "PWA", "EdTech"],
@@ -88,7 +88,7 @@ const rawProjects: Project[] = [
     results: ["Successfully deployed and tested with 50+ learners", "Achieved 95% offline functionality", "Reduced data usage by 60% through intelligent caching"]
   },
   {
-    title: "International Anglican Revival Ministries – Church Website",
+    title: "International Anglican Revival Ministries - Church Website",
     slug: "iarm-ministries",
     summary: "Ministry site for IARM in Edmonton, outlining service times, ministries, and donation options for a multicultural congregation.",
     tags: ["Web", "Nonprofit", "Ministry"],
@@ -119,7 +119,7 @@ const rawProjects: Project[] = [
     outcomes: ["Created 100+ graphics for various events and platforms", "Enhanced brand visibility for educational institutions"]
   },
   {
-    title: "Probity Partners East Africa (PPEA) – Law Firm Website",
+    title: "Probity Partners East Africa (PPEA) - Law Firm Website",
     slug: "ppea-law",
     summary: "Informational site for Probity Partners East Africa with service pages and contact.",
     tags: ["Web", "Corporate"],
@@ -135,7 +135,7 @@ const rawProjects: Project[] = [
     outcomes: ["Improved online presence", "Increased client inquiries by 25%"]
   },
   {
-    title: "Mindsafi – Mental Health Website",
+    title: "Mindsafi - Mental Health Website",
     slug: "mindsafi",
     summary: "Marketing site for mental health services with resources and contact funnel.",
     tags: ["Web", "Healthcare"],
@@ -151,7 +151,7 @@ const rawProjects: Project[] = [
     outcomes: ["Increased awareness of mental health services", "Improved accessibility compliance"]
   },
   {
-    title: "BookHub – Library Management System",
+    title: "BookHub - Library Management System",
     slug: "bookhub",
     summary: "CRUD library system: catalog, lending, user roles; admin dashboard.",
     tags: ["Platform", "CRUD"],
@@ -183,7 +183,7 @@ const rawProjects: Project[] = [
     outcomes: ["Reduced deployment time by 80%", "Improved system reliability"]
   },
   {
-    title: "Olearn – Mobile E-Learning",
+    title: "Olearn - Mobile E-Learning",
     slug: "olearn-mobile",
     summary: "Mobile learning app with course modules and assessments.",
     tags: ["Mobile", "EdTech"],
@@ -199,7 +199,7 @@ const rawProjects: Project[] = [
     outcomes: ["Launched on both iOS and Android", "10,000+ downloads"]
   },
   {
-    title: "Earthwise – Mobile App",
+    title: "Earthwise - Mobile App",
     slug: "earthwise-mobile",
     summary: "Conservation awareness & community actions tracker.",
     tags: ["Mobile", "Conservation"],
@@ -230,7 +230,7 @@ const rawProjects: Project[] = [
     outcomes: ["Improved file organization", "Enhanced security measures"]
   },
   {
-    title: "Skillhub – E-Learning Platform",
+    title: "Skillhub - E-Learning Platform",
     slug: "skillhub",
     summary: "Web e-learning with courses, progress tracking, and quizzes.",
     tags: ["Web App", "EdTech"],
@@ -278,7 +278,7 @@ const rawProjects: Project[] = [
     outcomes: ["Showcased client's impact in women empowerment", "Professional portfolio presentation", "Mobile-first responsive design"]
   },
   {
-    title: "Patrick Iranzi – Personal Leadership Portfolio",
+    title: "Patrick Iranzi - Personal Leadership Portfolio",
     slug: "patrick-portfolio",
     summary: "Personal portfolio highlighting leadership journey, key artifacts, and experiences as an ALU student and emerging entrepreneur.",
     tags: ["Web", "Portfolio"],

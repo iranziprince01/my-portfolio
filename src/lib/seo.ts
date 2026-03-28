@@ -32,6 +32,9 @@ export const defaultSEO: Metadata = {
     telephone: false,
   },
   metadataBase: new URL(baseUrl),
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+  },
   alternates: {
     canonical: '/',
   },

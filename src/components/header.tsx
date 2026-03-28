@@ -38,7 +38,7 @@ export function Header() {
         scrolled ? "shadow-sm" : ""
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="site-container">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">

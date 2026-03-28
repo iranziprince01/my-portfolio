@@ -26,7 +26,7 @@ export default function Home() {
 
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-          <div className="container mx-auto max-w-6xl">
+          <div className="site-content">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { value: "50+", label: "Projects Delivered" },
@@ -49,7 +49,7 @@ export default function Home() {
 
         {/* Featured Projects */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-7xl">
+          <div className="site-content">
             <ScrollReveal direction="up">
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 font-display">
@@ -87,7 +87,7 @@ export default function Home() {
 
         {/* Services Preview */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-          <div className="container mx-auto max-w-6xl">
+          <div className="site-content">
             <ScrollReveal direction="up">
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 font-display">
@@ -169,7 +169,7 @@ export default function Home() {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-4xl">
+          <div className="site-content">
             <ScrollReveal direction="up">
               <div className="text-center p-8 bg-card border border-border rounded-2xl">
                 <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 font-display">

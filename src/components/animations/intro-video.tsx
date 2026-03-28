@@ -93,7 +93,7 @@ export function IntroVideo({
         role="dialog"
         aria-label="Introduction video"
       >
-        <div className="relative w-full max-w-4xl mx-4">
+        <div className="relative w-full max-w-site mx-4">
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}

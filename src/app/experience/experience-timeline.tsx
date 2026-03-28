@@ -76,7 +76,7 @@ export function ExperienceTimeline({ experiences }: { experiences: Experience[] 
                         <span className="flex items-center gap-1.5">
                           <Calendar className="h-3.5 w-3.5" />
                           {exp.startDate}
-                          {exp.current ? " – Present" : ` – ${exp.endDate}`}
+                          {exp.current ? " - Present" : ` - ${exp.endDate}`}
                         </span>
                       </div>
                     </div>

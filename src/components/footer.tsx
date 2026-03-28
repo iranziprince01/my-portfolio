@@ -30,7 +30,7 @@ const quickLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-primary-foreground/20 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div className="site-container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">

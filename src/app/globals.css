@@ -41,6 +41,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  /* Standard content width: 1280px (common for marketing / portfolio layouts) */
+  --max-width-site: 80rem;
 }
 
 :root {
@@ -150,6 +152,14 @@
 }
 
 @layer utilities {
+  /* Max width + horizontal padding: header, footer, hero */
+  .site-container {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8;
+  }
+  /* Max width only; use inside sections that already set horizontal padding */
+  .site-content {
+    @apply mx-auto w-full max-w-site;
+  }
   .gradient-text {
     @apply text-primary;
   }
