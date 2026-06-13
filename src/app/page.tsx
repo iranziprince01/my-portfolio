@@ -9,19 +9,13 @@ import { HeroSection } from "@/components/hero-section"
 import { ProjectCard } from "@/components/project-card"
 import { Testimonials } from "@/components/testimonials"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
-import { NoSSR } from "@/components/no-ssr"
-import { IntroVideo } from "@/components/animations/intro-video"
 import { siteStats } from "@/data/site-stats"
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 6)
 
   return (
-    <>
-      <NoSSR>
-        <IntroVideo />
-      </NoSSR>
-      <div className="flex flex-col">
+    <div className="flex flex-col">
         {/* Hero Section */}
         <HeroSection />
 
@@ -200,6 +194,5 @@ export default function Home() {
           </div>
         </section>
       </div>
-    </>
   )
 }
