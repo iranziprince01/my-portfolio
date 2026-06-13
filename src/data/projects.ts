@@ -25,6 +25,29 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 const rawProjects: Project[] = [
   {
+    title: "Lumina Bridge Foundation - NGO Website",
+    slug: "lumina-bridge-foundation",
+    summary:
+      "Official website for Lumina Bridge Foundation, an Edmonton-based nonprofit empowering youth and communities across Alberta through arts, culture, leadership, and wellness programs.",
+    tags: ["Web", "NGO"],
+    role: "Full-stack Developer",
+    year: 2026,
+    links: {
+      live: "https://www.luminabridgefoundation.org/",
+    },
+    images: ["/lbf.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: [
+      "Mission, vision, and program areas presented for donors, partners, and community members",
+      "Impact stories and priority populations sections highlighting real community outcomes",
+      "Contact and office details with responsive layout for mobile and desktop visitors"
+    ],
+    outcomes: [
+      "Provides a professional digital home for Lumina Bridge Foundation",
+      "Supports program discovery, partnerships, volunteering, and community engagement"
+    ]
+  },
+  {
     title: "Talent Bridge Africa - Student Talent Studio",
     slug: "talent-bridge-africa",
     summary: "Student-powered talent studio connecting African students, graduates, and refugee youth with growing businesses that need flexible digital talent.",

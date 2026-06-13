@@ -131,6 +131,7 @@ export function ProjectsClient() {
               <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-xl">
                 <Image
                   src={
+                    project.slug === 'lumina-bridge-foundation' ? '/lbf.png' :
                     project.slug === 'talent-bridge-africa' ? '/Talent Bridge Africa.png' :
                     project.slug === 'byishimo-patrick-artist' ? '/patrick_byishimo.png' :
                     project.slug === 'fati-sango-portfolio' ? '/sango.png' :
@@ -207,7 +208,7 @@ export function ProjectsClient() {
                           className="flex items-center justify-center gap-1.5"
                         >
                           <ExternalLink className="h-3.5 w-3.5" />
-                          Live Demo
+                          Visit Site
                         </a>
                       </Button>
                     ) : (

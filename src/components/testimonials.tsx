@@ -21,7 +21,7 @@ const testimonials: Testimonial[] = [
     rating: 5
   },
   {
-    name: "Rev. Jean nsengiyumva",
+    name: "Rev. Jean Nsengiyumva",
     role: "Senior Pastor",
     company: "IARM",
     content: "Working with Prince was a game-changer for our ministry. He not only built a beautiful and functional website but also provided valuable insights on user experience and digital marketing. His attention to detail and commitment to quality is outstanding.",
@@ -30,8 +30,8 @@ const testimonials: Testimonial[] = [
   {
     name: "Fati Sango",
     role: "Founder",
-    company: "MindSafi",
-    content: "Prince transformed our vision into reality and exceeded our expectations. The mental health platform he developed is intuitive, accessible, and has helped us reach more people in need. His technical skills and understanding of our mission made all the difference.",
+    company: "Mindsafi",
+    content: "Prince built a professional, accessible website that helped us reach more people and clearly present our mental health services. His technical skill and genuine care for our mission made all the difference.",
     rating: 5
   }
 ]
@@ -46,7 +46,7 @@ export function Testimonials() {
               What Clients Say
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Trusted by organizations and leaders who value quality and innovation
+              Trusted by nonprofits, ministries, and founders across East Africa and beyond
             </p>
           </div>
         </ScrollReveal>

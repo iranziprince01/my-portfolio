@@ -17,6 +17,7 @@ interface ProjectCardProps {
 
 const getProjectImage = (slug: string) => {
   const imageMap: Record<string, string> = {
+    'lumina-bridge-foundation': '/lbf.png',
     'talent-bridge-africa': '/Talent Bridge Africa.png',
     'byishimo-patrick-artist': '/patrick_byishimo.png',
     'fati-sango-portfolio': '/sango.png',
@@ -107,7 +108,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                     className="flex items-center justify-center gap-1.5"
                   >
                     <ExternalLink className="h-3.5 w-3.5" />
-                    Live Demo
+                    Visit Site
                   </a>
                 </Button>
               ) : (

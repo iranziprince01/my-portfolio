@@ -22,12 +22,13 @@ export const experiences: Experience[] = [
     location: "Kigali, Rwanda",
     startDate: "2023",
     current: true,
-    description: "Providing full-stack development and digital marketing services to clients across East Africa. Specializing in web applications, mobile apps, and growth marketing strategies.",
+    description: "Providing full-stack development and digital marketing services to clients across East Africa and internationally. Specializing in Next.js websites, web applications, and growth marketing.",
     achievements: [
-      "Delivered 50+ web applications and mobile apps",
-      "Increased client revenue by 40% through digital marketing campaigns",
-      "Built offline-first PWA serving 500+ users in low-connectivity areas",
-      "Established partnerships with 3 local businesses for ongoing development"
+      "Delivered 19+ client websites, web apps, and mobile projects for nonprofits, founders, and organizations",
+      "Drove measurable growth for clients — including 25% increase in inquiries for PPEA and stronger brand reach via social campaigns",
+      "Built offline-first PWA piloted with 50+ learners in low-connectivity settings",
+      "Launched 2026 production sites for Lumina Bridge Foundation, Talent Bridge Africa, and gospel artist Byishimo Patrick",
+      "Built ongoing relationships with nonprofits, ministries, law firms, and health organizations across East Africa and Canada"
     ],
     technologies: ["React", "Next.js", "Node.js", "TypeScript", "Python", "Django", "React Native", "PostgreSQL", "MongoDB", "AWS", "Vercel"],
     type: "freelance"

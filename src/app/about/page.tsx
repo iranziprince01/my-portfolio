@@ -17,12 +17,13 @@ import { generatePageSEO } from "@/lib/seo";
 
 export const metadata: Metadata = generatePageSEO(
   "About - Prince Iranzi",
-  "Learn about Prince Iranzi, a Software Engineer and Digital Marketer from Rwanda, East Africa. Discover his journey, skills, and passion for building human-centered digital solutions.",
+  "Learn about Prince Iranzi, a Software Engineer and Digital Marketer based in Rwanda. Building Next.js websites, PWAs, and digital marketing for clients across East Africa and internationally.",
   "/about"
 );
 
 export default function AboutPage() {
   const skillCategories = [
+    { key: 'languages', name: 'Languages', icon: Code },
     { key: 'frontend', name: 'Frontend Development', icon: Code },
     { key: 'backend', name: 'Backend Development', icon: Code },
     { key: 'mobile', name: 'Mobile Development', icon: Code },
@@ -54,21 +55,23 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Based in Kigali, Rwanda, I&apos;m a passionate software engineer and 
-                  digital marketer with over 3 years of experience building 
-                  web applications, mobile apps, and digital marketing strategies 
-                  that drive real business results.
+                  Based in Kigali, Rwanda, I&apos;m a software engineer and digital
+                  marketer with 4+ years of experience building websites, web apps,
+                  and marketing strategies that drive real business results for
+                  clients across East Africa and internationally.
                 </p>
                 <p>
-                  My journey began with a curiosity about how technology can solve 
-                  real-world problems, especially in underserved communities. This 
-                  led me to specialize in offline-first applications and digital 
-                  marketing strategies that work in low-connectivity environments.
+                  My journey began with a curiosity about how technology can solve
+                  real-world problems, especially in underserved communities. That
+                  focus led me to offline-first applications, production-grade
+                  websites for nonprofits and professionals, and campaigns that
+                  reach the right audience.
                 </p>
                 <p>
-                  I believe in the power of technology to create positive change, 
-                  whether it&apos;s through an educational PWA that works offline or 
-                  a marketing campaign that reaches the right audience at the right time.
+                  I believe in technology that creates positive change — whether
+                  it&apos;s a nonprofit site for Lumina Bridge Foundation, an
+                  offline-first learning platform, or a marketing campaign that
+                  turns visibility into inquiries and growth.
                 </p>
               </div>
             </div>
@@ -79,7 +82,7 @@ export default function AboutPage() {
                   <h3 className="font-semibold">Location</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Kigali, Rwanda, East Africa
+                  Kigali, Rwanda — serving clients across East Africa and internationally
                 </p>
               </Card>
               <Card className="p-6">
@@ -97,7 +100,7 @@ export default function AboutPage() {
                   <h3 className="font-semibold">Focus</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Human-centered design and accessible technology solutions
+                  Client websites, web apps, and growth-focused digital marketing
                 </p>
               </Card>
             </div>
@@ -118,9 +121,9 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold">My Mission</h3>
               </div>
               <p className="text-muted-foreground">
-                To bridge the digital divide by creating accessible, reliable 
-                technology solutions that work for everyone, regardless of 
-                connectivity or technical expertise.
+                To help nonprofits, founders, and growing brands launch reliable
+                web platforms and marketing systems that expand reach, build trust,
+                and create lasting community impact.
               </p>
             </Card>
             <Card className="p-8">
@@ -195,9 +198,8 @@ export default function AboutPage() {
             Let&apos;s Work Together
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I&apos;m always interested in new opportunities and exciting projects. 
-            Whether you need a web application, mobile app, or digital marketing 
-            strategy, let&apos;s discuss how I can help.
+            I&apos;m open to new client projects — nonprofit websites, professional
+            portfolios, web apps, and digital marketing. Let&apos;s talk about your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">

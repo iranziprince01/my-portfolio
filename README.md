@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing software engineering and digit
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://my-portfolio-ten-ruddy-89.vercel.app/) *(Deploy when ready)*
+[View Portfolio](https://princeiranzi.dev)
 
 ## 📋 Overview
 
@@ -86,11 +86,14 @@ The contact form is integrated with Gmail SMTP for professional client inquiries
 
 ## 📱 Key Projects
 
-- **TekRiders** - Multi-platform transportation app
-- **PPEA** - Legal firm website
-- **MindSafi** - Mental health platform
-- **BookHub** - Academic resource platform
-- **Fitness Booking** - Gym management system
+- **Lumina Bridge Foundation** - Nonprofit website for an Edmonton-based foundation
+- **Talent Bridge Africa** - Student talent studio platform
+- **Byishimo Patrick** - Gospel artist portfolio website
+- **TekRiders** - Offline-first PWA e-learning platform
+- **PPEA** - Law firm website with measurable inquiry growth
+- **Mindsafi** - Mental health services marketing website
+- **BookHub** - Library management system with lending and admin dashboard
+- **IARM Ministries** - Church and ministry website
 
 ## 🧪 Testing
 

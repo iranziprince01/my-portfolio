@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    href: "mailto:prince@princeiranzi.dev",
+    href: "mailto:princeiranzi4@gmail.com",
     icon: Mail,
   },
 ]
@@ -38,8 +38,8 @@ export function Footer() {
               Prince Iranzi
             </h3>
             <p className="text-primary-foreground/90 mb-4 max-w-md">
-              Software Engineer & Digital Marketer building reliable, human-centered 
-              web platforms and growth-ready experiences.
+              Full-stack web development and digital marketing for nonprofits,
+              founders, and growing brands.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => {

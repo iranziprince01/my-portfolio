@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, ArrowLeft, CheckCircle } from "lucide-react"
-import Link from "next/link"
+import { ExternalLink, CheckCircle } from "lucide-react"
 import { Project } from "@/data/projects"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 
@@ -16,6 +15,7 @@ interface CaseStudyProps {
 export function CaseStudy({ project }: CaseStudyProps) {
   const getProjectImage = (slug: string) => {
     const imageMap: Record<string, string> = {
+      'lumina-bridge-foundation': '/lbf.png',
       'talent-bridge-africa': '/Talent Bridge Africa.png',
       'byishimo-patrick-artist': '/patrick_byishimo.png',
       'fati-sango-portfolio': '/sango.png',
@@ -40,16 +40,6 @@ export function CaseStudy({ project }: CaseStudyProps) {
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="site-content">
-        {/* Back Button */}
-        <ScrollReveal direction="right">
-          <Button asChild variant="ghost" className="mb-8">
-            <Link href="/projects">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Projects
-            </Link>
-          </Button>
-        </ScrollReveal>
-
         {/* Hero Section */}
         <ScrollReveal direction="up">
           <div className="mb-16">
@@ -81,7 +71,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
                     className="flex items-center gap-2"
                   >
                     <ExternalLink className="h-5 w-5" />
-                    View Live Demo
+                    Visit Site
                   </a>
                 </Button>
               ) : null}

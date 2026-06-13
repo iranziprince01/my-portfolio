@@ -11,6 +11,7 @@ import { Testimonials } from "@/components/testimonials"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import { NoSSR } from "@/components/no-ssr"
 import { IntroVideo } from "@/components/animations/intro-video"
+import { siteStats } from "@/data/site-stats"
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 6)
@@ -28,12 +29,7 @@ export default function Home() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="site-content">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { value: "50+", label: "Projects Delivered" },
-                { value: "500+", label: "Users Reached" },
-                { value: "40%", label: "Revenue Increase" },
-                { value: "4+", label: "Years Experience" },
-              ].map((stat, index) => (
+              {siteStats.map((stat, index) => (
                 <ScrollReveal key={index} direction="up" delay={index * 0.05}>
                   <div className="text-center p-4 bg-card border border-border rounded-lg">
                     <div className="text-3xl font-bold text-primary mb-1 font-display">
@@ -56,8 +52,8 @@ export default function Home() {
                   Featured Projects
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  A selection of my recent work showcasing full-stack development 
-                  and digital marketing expertise.
+                  Recent client work across nonprofits, founders, and growing brands —
+                  built with Next.js, TypeScript, and growth-focused digital marketing.
                 </p>
               </div>
             </ScrollReveal>
@@ -94,8 +90,8 @@ export default function Home() {
                   What I Do
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Combining technical expertise with marketing insights to deliver 
-                  comprehensive digital solutions.
+                  Engineering and marketing under one roof — from discovery and build
+                  to launch, SEO, and campaigns that drive measurable growth.
                 </p>
               </div>
             </ScrollReveal>
@@ -112,12 +108,12 @@ export default function Home() {
                     </h3>
                   </div>
                   <p className="text-muted-foreground mb-4">
-                    Full-stack web applications, mobile apps, and PWAs built with 
-                    modern technologies like React, Next.js, and TypeScript.
+                    Production-grade websites, web apps, and PWAs for nonprofits,
+                    professionals, and startups — built with React, Next.js, and TypeScript.
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     {[
-                      "Web & Mobile App Development",
+                      "Client & Nonprofit Websites",
                       "Progressive Web Apps (PWA)",
                       "API Development & Integration",
                       "DevOps & Deployment"
@@ -176,8 +172,8 @@ export default function Home() {
                   Ready to Build Something Amazing?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Let&apos;s discuss how I can help bring your vision to life with cutting-edge 
-                  technology and strategic marketing.
+                  Let&apos;s discuss your next website, web app, or marketing campaign —
+                  clear communication, reliable delivery, and results you can measure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 

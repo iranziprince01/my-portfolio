@@ -14,7 +14,7 @@ import { generatePageSEO } from "@/lib/seo";
 
 export const metadata: Metadata = generatePageSEO(
   "Contact - Prince Iranzi",
-  "Get in touch with Prince Iranzi for your next software engineering or digital marketing project. Available for freelance and consulting opportunities.",
+  "Get in touch with Prince Iranzi for your next website, web app, or digital marketing project. Available for freelance work — remote-friendly, clients worldwide welcome.",
   "/contact"
 );
 
@@ -28,8 +28,8 @@ export default function ContactPage() {
             Get In Touch
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your next project? I&apos;d love to hear about your ideas 
-            and discuss how I can help bring them to life.
+            Ready to launch your next website or campaign? Tell me about your goals
+            and I&apos;ll reply within 24 hours with next steps.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-foreground">Location</h3>
                       <p className="text-muted-foreground">Kigali, Rwanda</p>
-                      <p className="text-sm text-muted-foreground">East Africa</p>
+                      <p className="text-sm text-muted-foreground">Serving clients worldwide</p>
                     </div>
                   </div>
                 </Card>
@@ -155,9 +155,8 @@ export default function ContactPage() {
                 What&apos;s your typical project timeline?
               </h3>
               <p className="text-muted-foreground">
-                Project timelines vary based on complexity. Simple websites take 2-4 weeks, 
-                while complex web applications can take 2-3 months. I provide detailed 
-                timelines during our initial consultation.
+                Marketing sites typically take 2–4 weeks. Custom web apps run 6–12 weeks.
+                I share a clear timeline and milestones after a short discovery call.
               </p>
             </Card>
             <Card className="p-6">

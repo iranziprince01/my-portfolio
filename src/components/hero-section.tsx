@@ -32,18 +32,19 @@ export function HeroSection() {
                 </div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground font-display leading-tight tracking-tight">
                   Building{" "}
-                  <span className="text-primary">Digital</span>
+                  <span className="text-primary">Web Platforms</span>
                   <br />
-                  Solutions That{" "}
-                  <span className="text-primary">Matter</span>
+                  That{" "}
+                  <span className="text-primary">Deliver Results</span>
                 </h1>
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Crafting reliable, scalable web platforms with modern technologies. 
-                Specialized in full-stack and mobile app development.
+                I build reliable, scalable web platforms and growth-ready digital
+                experiences — from Next.js client sites and PWAs to SEO and social
+                campaigns that drive measurable results.
               </p>
             </ScrollReveal>
 

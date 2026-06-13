@@ -3,17 +3,16 @@ import Link from "next/link"
 import { ExperienceTimeline } from "./experience-timeline"
 import { experiences } from "@/data/experience"
 import { generatePageSEO } from "@/lib/seo"
+import { siteStats } from "@/data/site-stats"
 import {
   ArrowRight,
   BarChart3,
-  Users,
-  TrendingUp,
-  Calendar,
   LineChart,
   Shield,
   ScanEye,
   HeartHandshake,
   Code,
+  TrendingUp,
 } from "lucide-react"
 
 export const metadata: Metadata = generatePageSEO(
@@ -106,8 +105,8 @@ export default function ExperiencePage() {
             Experience & Impact
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            My journey in software engineering and digital marketing: building products
-            and campaigns that create real impact.
+            My journey across software engineering, digital marketing, and
+            mission-driven work — building products and campaigns with measurable impact.
           </p>
         </header>
 
@@ -120,33 +119,12 @@ export default function ExperiencePage() {
             Impact at a Glance
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {[
-              {
-                value: "50+",
-                label: "Projects Delivered",
-                icon: BarChart3,
-              },
-              {
-                value: "500+",
-                label: "Users Impacted",
-                icon: Users,
-              },
-              {
-                value: "40%",
-                label: "Avg. Revenue Increase",
-                icon: TrendingUp,
-              },
-              {
-                value: "4+",
-                label: "Years Experience",
-                icon: Calendar,
-              },
-            ].map((stat) => (
+            {siteStats.map((stat) => (
               <div
                 key={stat.label}
                 className="rounded-xl border border-border/60 bg-card/50 p-5 sm:p-6 text-center hover:border-primary/30 hover:shadow-md hover:shadow-primary/5 transition-all duration-300"
               >
-                <stat.icon className="h-6 w-6 text-primary mx-auto mb-3" />
+                <BarChart3 className="h-6 w-6 text-primary mx-auto mb-3" />
                 <div className="text-2xl sm:text-3xl font-bold text-primary font-display">
                   {stat.value}
                 </div>
@@ -165,8 +143,8 @@ export default function ExperiencePage() {
               Ready to Work Together?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              I&apos;m always excited to take on new challenges and create meaningful
-              solutions. Let&apos;s discuss how I can help with your next project.
+              I&apos;m available for freelance web development, Next.js builds, and
+              digital marketing. Let&apos;s ship something reliable that grows your audience.
             </p>
             <Link
               href="/contact"

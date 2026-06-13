@@ -7,11 +7,14 @@ export const defaultSEO: Metadata = {
     default: 'Prince Iranzi - Software Engineer & Digital Marketer',
     template: '%s | Prince Iranzi'
   },
-  description: 'Software Engineer & Digital Marketer building reliable, human-centered web platforms and growth-ready experiences. Specializing in React, Next.js, and digital marketing strategies.',
+  description: 'Software Engineer & Digital Marketer building reliable, human-centered web platforms for nonprofits, founders, and growing brands. Specializing in Next.js, TypeScript, PWAs, and digital marketing.',
   keywords: [
     'Software Engineer',
     'Digital Marketer',
     'React Developer',
+    'Next.js Developer',
+    'Freelance Web Developer',
+    'Nonprofit Websites',
     'Next.js',
     'TypeScript',
     'Web Development',
@@ -43,7 +46,7 @@ export const defaultSEO: Metadata = {
     locale: 'en_US',
     url: baseUrl,
     title: 'Prince Iranzi - Software Engineer & Digital Marketer',
-    description: 'Software Engineer & Digital Marketer building reliable, human-centered web platforms and growth-ready experiences.',
+    description: 'Software Engineer & Digital Marketer building Next.js websites, PWAs, and growth-focused digital marketing for clients worldwide.',
     siteName: 'Prince Iranzi Portfolio',
     images: [
       {
@@ -57,7 +60,7 @@ export const defaultSEO: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Prince Iranzi - Software Engineer & Digital Marketer',
-    description: 'Software Engineer & Digital Marketer building reliable, human-centered web platforms and growth-ready experiences.',
+    description: 'Software Engineer & Digital Marketer building Next.js websites, PWAs, and growth-focused digital marketing for clients worldwide.',
     images: ['/og-image.jpg'],
     creator: '@princeiranzi',
   },

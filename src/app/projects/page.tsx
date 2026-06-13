@@ -4,7 +4,7 @@ import { generatePageSEO } from "@/lib/seo";
 
 export const metadata: Metadata = generatePageSEO(
   "Projects - Prince Iranzi",
-  "Explore my portfolio of web applications, mobile apps, and digital marketing projects. From offline-first PWAs to full-stack platforms.",
+  "Explore 19+ client projects: nonprofit websites, professional portfolios, PWAs, and full-stack platforms built with Next.js and TypeScript.",
   "/projects"
 );
 
@@ -17,9 +17,8 @@ export default function ProjectsPage() {
             My Projects
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A collection of web applications, mobile apps, and digital marketing 
-            projects I&apos;ve built and managed. Each project represents a unique 
-            challenge and learning opportunity.
+            Client work for nonprofits, founders, and growing brands — from production
+            Next.js websites to offline-first PWAs and full-stack platforms.
           </p>
         </div>
         <ProjectsClient />

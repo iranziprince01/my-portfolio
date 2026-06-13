@@ -46,7 +46,7 @@ export async function GET() {
               maxWidth: '800px',
             }}
           >
-            Software Engineer × Digital Marketer
+            Software Engineer & Digital Marketer
           </p>
           <div
             style={{
@@ -56,7 +56,7 @@ export async function GET() {
               color: '#718096',
             }}
           >
-            <span>React • Next.js • TypeScript</span>
+            <span>Next.js • TypeScript • Nonprofit & Client Websites</span>
           </div>
         </div>
       </div>
