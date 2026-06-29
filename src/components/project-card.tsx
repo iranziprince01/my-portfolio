@@ -17,6 +17,7 @@ interface ProjectCardProps {
 
 const getProjectImage = (slug: string) => {
   const imageMap: Record<string, string> = {
+    'innocent-photos': '/innocent_photos.png',
     'lumina-bridge-foundation': '/lbf.png',
     'talent-bridge-africa': '/Talent Bridge Africa.png',
     'byishimo-patrick-artist': '/patrick_byishimo.png',

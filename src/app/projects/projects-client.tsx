@@ -131,6 +131,7 @@ export function ProjectsClient() {
               <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-xl">
                 <Image
                   src={
+                    project.slug === 'innocent-photos' ? '/innocent_photos.png' :
                     project.slug === 'lumina-bridge-foundation' ? '/lbf.png' :
                     project.slug === 'talent-bridge-africa' ? '/Talent Bridge Africa.png' :
                     project.slug === 'byishimo-patrick-artist' ? '/patrick_byishimo.png' :

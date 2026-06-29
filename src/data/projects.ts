@@ -25,6 +25,29 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 const rawProjects: Project[] = [
   {
+    title: "Innocent Photos - Photography Website",
+    slug: "innocent-photos",
+    summary:
+      "Professional photography website for Innocent Photos, a Tallahassee-based studio offering weddings, portraits, family sessions, and more across the USA.",
+    tags: ["Web", "Photography"],
+    role: "Full-stack Developer",
+    year: 2026,
+    links: {
+      live: "https://innocentphotos.com/",
+    },
+    images: ["/innocent_photos.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: [
+      "Portfolio showcase and service pages for weddings, portraits, family, and events",
+      "Client testimonials and clear booking flow for session inquiries",
+      "Responsive layout optimized for mobile and desktop visitors"
+    ],
+    outcomes: [
+      "Provides a professional online presence for Innocent Photos",
+      "Helps convert visitors into booked sessions with clear CTAs and service details"
+    ]
+  },
+  {
     title: "Lumina Bridge Foundation - NGO Website",
     slug: "lumina-bridge-foundation",
     summary:
