@@ -31,9 +31,6 @@ export default function Home() {
                       {stat.value}
                     </div>
                     <div className="text-sm font-medium text-foreground">{stat.label}</div>
-                    {"detail" in stat && stat.detail && (
-                      <div className="text-xs text-muted-foreground mt-0.5">{stat.detail}</div>
-                    )}
                   </div>
                 </ScrollReveal>
               ))}
