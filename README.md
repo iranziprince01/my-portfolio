@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing software engineering and digit
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://princeiranzi.dev)
+[View Portfolio](https://www.princeiranzi.com)
 
 ## 📋 Overview
 
