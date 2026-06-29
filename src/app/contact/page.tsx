@@ -2,140 +2,108 @@ import { Metadata } from "next";
 import { ContactForm } from "./contact-form";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Mail, 
-  MapPin, 
-  Phone,
-  Clock, 
-  Github, 
-  Linkedin
-} from "lucide-react";
+import { Mail, MapPin, Phone, Clock, Github, Linkedin } from "lucide-react";
 import { generatePageSEO } from "@/lib/seo";
+import { siteCopy } from "@/data/site-copy";
 
 export const metadata: Metadata = generatePageSEO(
   "Contact - Prince Iranzi",
-  "Get in touch with Prince Iranzi for your next website, web app, or digital marketing project. Available for freelance work — remote-friendly, clients worldwide welcome.",
+  "Get in touch for websites, web apps, or digital marketing. Based in Kigali, working with clients worldwide.",
   "/contact"
 );
 
 export default function ContactPage() {
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="site-content">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Get In Touch
+    <>
+      <section className="site-section">
+        <div className="site-content text-center max-w-xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+            {siteCopy.contact.title}
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to launch your next website or campaign? Tell me about your goals
-            and I&apos;ll reply within 24 hours with next steps.
-          </p>
+          <p className="mt-3 text-muted-foreground">{siteCopy.contact.subtitle}</p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div>
-            <h2 className="text-2xl font-bold text-foreground mb-6">
-              Send a Message
-            </h2>
-            <ContactForm />
-          </div>
-
-          {/* Contact Information */}
-          <div className="space-y-8">
+      <section className="site-section-alt">
+        <div className="site-content">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">
-                Contact Information
-              </h2>
-              <div className="space-y-6">
-                <Card className="p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Email</h3>
-                      <p className="text-muted-foreground">princeiranzi4@gmail.com</p>
-                      <a 
-                        href="mailto:princeiranzi4@gmail.com"
-                        className="text-sm text-primary hover:underline"
-                      >
-                        Send an email
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Phone className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Phone</h3>
-                      <p className="text-muted-foreground">+250785961427</p>
-                      <a 
-                        href="tel:+250785961427"
-                        className="text-sm text-primary hover:underline"
-                      >
-                        Call now
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Location</h3>
-                      <p className="text-muted-foreground">Kigali, Rwanda</p>
-                      <p className="text-sm text-muted-foreground">Serving clients worldwide</p>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <Clock className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Response Time</h3>
-                      <p className="text-muted-foreground">Within 24 hours</p>
-                      <p className="text-sm text-muted-foreground">Usually much faster</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
+              <ContactForm />
             </div>
 
-            {/* Social Links */}
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Connect With Me
-              </h3>
-              <div className="flex gap-4">
-                <Button asChild variant="outline" size="lg">
+            <div className="space-y-4">
+              <Card className="playful-card p-5 border-0 shadow-none">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-2xl">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">princeiranzi4@gmail.com</p>
+                    <a
+                      href="mailto:princeiranzi4@gmail.com"
+                      className="text-sm text-primary hover:underline"
+                    >
+                      Email me
+                    </a>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="playful-card p-5 border-0 shadow-none">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-2xl">
+                    <Phone className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">+250 785 961 427</p>
+                    <a href="tel:+250785961427" className="text-sm text-primary hover:underline">
+                      Call
+                    </a>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="playful-card p-5 border-0 shadow-none">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-2xl">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Kigali, Rwanda</p>
+                    <p className="text-sm text-muted-foreground">Remote clients welcome</p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="playful-card p-5 border-0 shadow-none">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-2xl">
+                    <Clock className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">{siteCopy.contact.response}</p>
+                  </div>
+                </div>
+              </Card>
+
+              <div className="flex gap-3 pt-2">
+                <Button asChild variant="outline" className="rounded-xl border-2 font-semibold">
                   <a
                     href="https://github.com/iranziprince01"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="h-5 w-5 mr-2" />
+                    <Github className="h-4 w-4 mr-2" />
                     GitHub
                   </a>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" className="rounded-xl border-2 font-semibold">
                   <a
                     href="https://www.linkedin.com/in/prince-iranzi/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Linkedin className="h-5 w-5 mr-2" />
+                    <Linkedin className="h-4 w-4 mr-2" />
                     LinkedIn
                   </a>
                 </Button>
@@ -143,55 +111,35 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* FAQ Section */}
-        <section className="mt-20">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Frequently Asked Questions
+      <section className="site-section">
+        <div className="site-content">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center font-display">
+            Quick answers
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                What&apos;s your typical project timeline?
-              </h3>
-              <p className="text-muted-foreground">
-                Marketing sites typically take 2–4 weeks. Custom web apps run 6–12 weeks.
-                I share a clear timeline and milestones after a short discovery call.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <Card className="playful-card p-5 border-0 shadow-none">
+              <h3 className="font-bold text-foreground mb-2">Timeline?</h3>
+              <p className="text-sm text-muted-foreground">
+                Marketing sites: 2–4 weeks. Custom apps: 6–12 weeks. I share milestones upfront.
               </p>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                Do you work with clients outside Rwanda?
-              </h3>
-              <p className="text-muted-foreground">
-                Absolutely! I work with clients globally. I&apos;m comfortable with remote 
-                collaboration and can accommodate different time zones for meetings 
-                and communication.
+            <Card className="playful-card p-5 border-0 shadow-none">
+              <h3 className="font-bold text-foreground mb-2">Remote work?</h3>
+              <p className="text-sm text-muted-foreground">
+                Yes. I work with clients in Rwanda, East Africa, North America, and beyond.
               </p>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                What&apos;s included in your development services?
-              </h3>
-              <p className="text-muted-foreground">
-                My services include design, development, testing, deployment, and 
-                post-launch support. I also provide documentation, training, and 
-                maintenance packages as needed.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                How do you handle project communication?
-              </h3>
-              <p className="text-muted-foreground">
-                I maintain regular communication through your preferred channels 
-                (email, Slack, WhatsApp). I provide weekly progress updates and 
-                am always available for questions and feedback.
+            <Card className="playful-card p-5 border-0 shadow-none">
+              <h3 className="font-bold text-foreground mb-2">What you get?</h3>
+              <p className="text-sm text-muted-foreground">
+                Design, build, launch, and post-launch support. Marketing-only or build-only both work.
               </p>
             </Card>
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -7,7 +7,7 @@ export const defaultSEO: Metadata = {
     default: 'Prince Iranzi - Software Engineer & Digital Marketer',
     template: '%s | Prince Iranzi'
   },
-  description: 'Software Engineer & Digital Marketer building reliable, human-centered web platforms for nonprofits, founders, and growing brands. Specializing in Next.js, TypeScript, PWAs, and digital marketing.',
+  description: 'Software engineer and digital marketer in Kigali. Websites, PWAs, and growth marketing for nonprofits and founders.',
   keywords: [
     'Software Engineer',
     'Digital Marketer',

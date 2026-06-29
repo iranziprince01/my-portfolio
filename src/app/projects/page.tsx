@@ -1,6 +1,9 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { ProjectsClient } from "./projects-client";
+import { Button } from "@/components/ui/button";
 import { generatePageSEO } from "@/lib/seo";
+import { siteCopy } from "@/data/site-copy";
 
 export const metadata: Metadata = generatePageSEO(
   "Projects - Prince Iranzi",
@@ -10,19 +13,33 @@ export const metadata: Metadata = generatePageSEO(
 
 export default function ProjectsPage() {
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="site-content">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            My Projects
+    <>
+      <section className="site-section">
+        <div className="site-content text-center max-w-2xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+            {siteCopy.projects.title}
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Client work for nonprofits, founders, and growing brands — from production
-            Next.js websites to offline-first PWAs and full-stack platforms.
-          </p>
+          <p className="mt-3 text-muted-foreground">{siteCopy.projects.subtitle}</p>
         </div>
-        <ProjectsClient />
-      </div>
-    </div>
+      </section>
+      <section className="site-section-alt">
+        <div className="site-content">
+          <ProjectsClient />
+        </div>
+      </section>
+
+      <section className="site-section">
+        <div className="site-content text-center">
+          <div className="playful-card p-8 max-w-xl mx-auto border-0 shadow-none">
+            <h2 className="text-3xl font-bold text-foreground mb-5 font-display">
+              {siteCopy.sections.cta.title}
+            </h2>
+            <Button asChild size="lg" className="playful-btn px-8 py-6">
+              <Link href="/contact">{siteCopy.sections.cta.primary}</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

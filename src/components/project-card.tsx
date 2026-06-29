@@ -45,9 +45,8 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
   return (
     <ScrollReveal delay={index * 0.05} direction="up">
-      <Card className="group h-full flex flex-col overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-xl bg-card/50 backdrop-blur-sm pt-0">
-        {/* Image Container - flush to top */}
-        <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-xl">
+      <Card className="group h-full flex flex-col overflow-hidden border-2 border-border/50 hover:border-primary/30 transition-all duration-200 shadow-sm hover:-translate-y-0.5 bg-card pt-0 rounded-2xl">
+        <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-2xl">
           <Image
             src={getProjectImage(project.slug)}
             alt={project.title}
@@ -61,7 +60,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
           {/* Year Badge - Modern style */}
           <div className="absolute top-3 left-3 z-10">
-            <Badge className="bg-background/90 backdrop-blur-md text-foreground border border-border/50 shadow-sm text-xs font-medium px-2.5 py-0.5">
+            <Badge className="bg-background/90 backdrop-blur-md text-foreground border border-border/50 shadow-sm text-xs font-semibold px-2.5 py-0.5 rounded-full">
               {project.year}
             </Badge>
           </div>
@@ -91,16 +90,15 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
           {/* Role - Subtle */}
           <div className="mt-auto pt-4 border-t border-border/50">
-            <p className="text-xs text-muted-foreground mb-4 font-medium uppercase tracking-wider">
+            <p className="text-xs text-muted-foreground mb-3 font-semibold uppercase tracking-wide">
               {project.role}
             </p>
             
-            {/* Action Buttons - Equal Size */}
             <div className="flex gap-2">
               {hasLiveLink ? (
                 <Button
                   asChild
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-xs h-9 shadow-sm hover:shadow-md transition-all"
+                  className="flex-1 playful-btn text-xs h-9"
                 >
                   <a
                     href={project.links.live || project.links.demo}
@@ -126,10 +124,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               <Button 
                 asChild 
                 variant="outline" 
-                className="flex-1 border border-border/50 hover:border-primary/50 text-xs h-9 font-medium"
+                className="flex-1 border-2 rounded-xl text-xs h-9 font-semibold"
               >
                 <Link href={`/projects/${project.slug}`} className="flex items-center justify-center gap-1.5">
-                  More Details
+                  Details
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </Button>

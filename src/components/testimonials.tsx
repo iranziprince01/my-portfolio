@@ -14,6 +14,27 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
+    name: "Aristote Bikino",
+    role: "CEO",
+    company: "Lumina Bridge Foundation",
+    content: "Prince built a website that finally tells our story the right way. Our programs, impact, and contact details are easy to find, and partners and community members take us more seriously online. He listened, moved fast, and delivered exactly what we needed.",
+    rating: 5
+  },
+  {
+    name: "Innocent Bahati",
+    role: "Professional Photographer",
+    company: "Innocent Photos",
+    content: "I needed a site that shows my work and makes booking simple. Prince delivered both. My portfolio looks clean, my services are clear, and clients can reach me without confusion. It has already helped me present my brand more professionally.",
+    rating: 5
+  },
+  {
+    name: "Jerome Iska",
+    role: "Founder",
+    company: "Talent Bridge Africa",
+    content: "Prince understood our mission from day one. He built a site that explains what Talent Bridge Africa does for students and businesses in a way people actually get. The layout is clear, modern, and ready for the growth we are working toward.",
+    rating: 5
+  },
+  {
     name: "Kayigamba Alice",
     role: "Managing Director",
     company: "PPEA",
@@ -36,25 +57,24 @@ const testimonials: Testimonial[] = [
   }
 ]
 
-export function Testimonials() {
+export function Testimonials({ limit }: { limit?: number }) {
+  const items = limit ? testimonials.slice(0, limit) : testimonials
+
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section className="site-section">
       <div className="site-content">
         <ScrollReveal direction="up">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 font-display">
-              What Clients Say
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-display">
+              Client words
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Trusted by nonprofits, ministries, and founders across East Africa and beyond
-            </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <ScrollReveal key={index} delay={index * 0.05} direction="up">
-              <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors h-full flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {items.map((testimonial, index) => (
+            <ScrollReveal key={testimonial.name} delay={index * 0.05} direction="up">
+              <div className="playful-card p-6 h-full flex flex-col border-0 shadow-none">
                 <Quote className="h-6 w-6 text-primary/20 mb-3" />
                 
                 {testimonial.rating && (

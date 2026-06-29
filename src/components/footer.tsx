@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail, Phone } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 import { BackToTop } from "@/components/back-to-top"
+import { siteCopy } from "@/data/site-copy"
 
 const socialLinks = [
   {
@@ -13,17 +14,11 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/prince-iranzi/",
     icon: Linkedin,
   },
-  {
-    name: "Email",
-    href: "mailto:princeiranzi4@gmail.com",
-    icon: Mail,
-  },
 ]
 
 const quickLinks = [
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
-  { name: "Experience", href: "/experience" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -34,12 +29,11 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-lg font-semibold text-primary-foreground mb-4">
+            <h3 className="text-lg font-[900] text-primary-foreground mb-4">
               Prince Iranzi
             </h3>
             <p className="text-primary-foreground/90 mb-4 max-w-md">
-              Full-stack web development and digital marketing for nonprofits,
-              founders, and growing brands.
+              {siteCopy.footer.tagline}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => {
@@ -62,7 +56,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-primary-foreground mb-4">
+            <h4 className="text-sm font-[900] text-primary-foreground mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -81,8 +75,8 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-primary-foreground mb-4">
-              Get In Touch
+            <h4 className="text-sm font-[900] text-primary-foreground mb-4">
+              Say hello
             </h4>
             <div className="space-y-2">
               <a
@@ -99,6 +93,10 @@ export function Footer() {
                 <Phone className="h-4 w-4 mr-2" />
                 +250785961427
               </a>
+              <p className="flex items-center text-sm text-primary-foreground/90">
+                <MapPin className="h-4 w-4 mr-2" />
+                Kigali, Rwanda
+              </p>
             </div>
           </div>
         </div>

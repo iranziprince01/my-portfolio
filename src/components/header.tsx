@@ -56,7 +56,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="relative px-4 py-2 text-sm font-medium transition-colors"
+                    className="relative px-4 py-2 text-sm font-semibold transition-colors rounded-full"
                   >
                     <span
                       className={`relative z-10 ${
@@ -66,7 +66,7 @@ export function Header() {
                       {item.name}
                     </span>
                     {isActive && (
-                      <div className="absolute inset-0 bg-primary/10 rounded-lg" />
+                      <div className="absolute inset-0 bg-primary/10 rounded-full" />
                     )}
                   </Link>
                 )

@@ -40,10 +40,10 @@ const rawProjects: Project[] = [
     highlights: [
       "Portfolio showcase and service pages for weddings, portraits, family, and events",
       "Client testimonials and clear booking flow for session inquiries",
-      "Responsive layout optimized for mobile and desktop visitors"
+      "Mobile-first gallery and booking flow for session inquiries",
     ],
     outcomes: [
-      "Provides a professional online presence for Innocent Photos",
+      "Helps visitors book sessions with clear service pages and CTAs",
       "Helps convert visitors into booked sessions with clear CTAs and service details"
     ]
   },
@@ -63,10 +63,10 @@ const rawProjects: Project[] = [
     highlights: [
       "Mission, vision, and program areas presented for donors, partners, and community members",
       "Impact stories and priority populations sections highlighting real community outcomes",
-      "Contact and office details with responsive layout for mobile and desktop visitors"
+      "Contact and office details with clear program navigation",
     ],
     outcomes: [
-      "Provides a professional digital home for Lumina Bridge Foundation",
+      "Supports donors, partners, and volunteers finding programs fast",
       "Supports program discovery, partnerships, volunteering, and community engagement"
     ]
   },
@@ -85,11 +85,10 @@ const rawProjects: Project[] = [
     highlights: [
       "Landing page clearly explaining the student talent studio model",
       "Sections tailored for both businesses and students with clear CTAs",
-      "Responsive layout optimized for mobile and desktop visitors"
+      "Dual paths for students and businesses with clear next-step CTAs",
     ],
     outcomes: [
-      "Provides a professional digital home for Talent Bridge Africa",
-      "Helps connect students, graduates, and refugee youth with real client work"
+      "Connects students and refugee youth with real client opportunities",
     ]
   },
   {
@@ -202,7 +201,7 @@ const rawProjects: Project[] = [
     },
     images: ["/images/projects/ppea-1.jpg", "/images/projects/ppea-2.jpg"],
     tech: ["Next.js", "Tailwind", "Vercel"],
-    highlights: ["Professional design", "SEO optimized", "Contact integration"],
+    highlights: ["Accessible layout", "SEO-ready structure", "Contact integration"],
     outcomes: ["Improved online presence", "Increased client inquiries by 25%"]
   },
   {
@@ -218,7 +217,7 @@ const rawProjects: Project[] = [
     },
     images: ["/images/projects/mindsafi-1.jpg", "/images/projects/mindsafi-2.jpg"],
     tech: ["Next.js", "Tailwind"],
-    highlights: ["Accessible design", "SEO optimized", "Resource library"],
+    highlights: ["Accessible layout", "Resource library", "Clear service pages"],
     outcomes: ["Increased awareness of mental health services", "Improved accessibility compliance"]
   },
   {
