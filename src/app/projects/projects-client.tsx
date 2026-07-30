@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Search, Filter, X, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
+import { getProjectImage } from "@/data/media";
 
 const allTags = Array.from(new Set(projects.flatMap(project => project.tags))).sort();
 
@@ -130,29 +131,7 @@ export function ProjectsClient() {
               {/* Project Thumbnail - flush to top */}
               <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-xl">
                 <Image
-                  src={
-                    project.slug === 'innocent-photos' ? '/innocent_photos.png' :
-                    project.slug === 'lumina-bridge-foundation' ? '/lbf.png' :
-                    project.slug === 'talent-bridge-africa' ? '/Talent Bridge Africa.png' :
-                    project.slug === 'byishimo-patrick-artist' ? '/patrick_byishimo.png' :
-                    project.slug === 'fati-sango-portfolio' ? '/sango.png' :
-                    project.slug === 'tekriders' ? '/tekriders.png' :
-                    project.slug === 'iarm-ministries' ? '/iarm.png' :
-                    project.slug === 'graphic-design-work' ? '/graphics-sowc.png' :
-                    project.slug === 'ppea-law' ? '/PPEA.png' :
-                    project.slug === 'mindsafi' ? '/mindsafi.png' :
-                    project.slug === 'bookhub' ? '/bookhub.png' :
-                    project.slug === 'fitness-booking-devops' ? '/fitness-booking.jpg' :
-                    project.slug === 'olearn-mobile' ? '/olearn.webp' :
-                    project.slug === 'earthwise-mobile' ? '/earthwise.jpg' :
-                    project.slug === 'django-file-mgmt' ? '/file-management.png' :
-                    project.slug === 'skillhub' ? '/skillhub.png' :
-                    project.slug === 'github-academics' ? '/academic-projects.png' :
-                    project.slug === 'honnette-portfolio' ? '/honnette.png' :
-                    project.slug === 'patrick-portfolio' ? '/Patrick.png' :
-                    // Fallback to a known existing image instead of a missing placeholder
-                    '/tekriders.png'
-                  }
+                  src={getProjectImage(project.slug)}
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

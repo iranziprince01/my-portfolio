@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "media:upload": "node scripts/upload-blob-media.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -17,6 +18,7 @@
     "@radix-ui/react-switch": "^1.2.6",
     "@types/nodemailer": "^7.0.1",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/blob": "^2.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.16",

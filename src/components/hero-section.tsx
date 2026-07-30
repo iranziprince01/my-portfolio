@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { ScrollReveal } from "./animations/scroll-reveal"
 import { siteCopy } from "@/data/site-copy"
+import { mediaUrl } from "@/data/media"
 
 export function HeroSection() {
   const words = siteCopy.hero.title.split(" ")
@@ -85,7 +86,7 @@ export function HeroSection() {
               <div className="relative w-full max-w-md group">
                 <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-[3px] border-border/80 shadow-xl shadow-primary/10 transition-all duration-300 group-hover:-translate-y-1">
                   <Image
-                    src="/Prince.jpg"
+                    src={mediaUrl("/Prince.jpg")}
                     alt="Prince Iranzi"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

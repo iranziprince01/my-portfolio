@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
+import { mediaUrl } from '@/data/media';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://princeiranzi.dev';
+const ogImage = mediaUrl('/Prince.jpg');
 
 export const defaultSEO: Metadata = {
   title: {
@@ -50,7 +52,7 @@ export const defaultSEO: Metadata = {
     siteName: 'Prince Iranzi Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: 'Prince Iranzi - Software Engineer & Digital Marketer',
@@ -61,7 +63,7 @@ export const defaultSEO: Metadata = {
     card: 'summary_large_image',
     title: 'Prince Iranzi - Software Engineer & Digital Marketer',
     description: 'Software Engineer & Digital Marketer building Next.js websites, PWAs, and growth-focused digital marketing for clients worldwide.',
-    images: ['/og-image.jpg'],
+    images: [ogImage],
     creator: '@princeiranzi',
   },
   robots: {

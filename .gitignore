@@ -39,6 +39,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local image sources (served from Vercel Blob CDN)
+/media
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

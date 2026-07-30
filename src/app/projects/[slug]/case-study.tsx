@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, CheckCircle } from "lucide-react"
 import { Project } from "@/data/projects"
+import { getProjectImage } from "@/data/media"
 import { ScrollReveal } from "@/components/animations/scroll-reveal"
 
 interface CaseStudyProps {
@@ -14,30 +15,6 @@ interface CaseStudyProps {
 }
 
 export function CaseStudy({ project }: CaseStudyProps) {
-  const getProjectImage = (slug: string) => {
-    const imageMap: Record<string, string> = {
-      'innocent-photos': '/innocent_photos.png',
-      'lumina-bridge-foundation': '/lbf.png',
-      'talent-bridge-africa': '/Talent Bridge Africa.png',
-      'byishimo-patrick-artist': '/patrick_byishimo.png',
-      'fati-sango-portfolio': '/sango.png',
-      'tekriders': '/tekriders.png',
-      'iarm-ministries': '/iarm.png',
-      'graphic-design-work': '/graphics-sowc.png',
-      'ppea-law': '/PPEA.png',
-      'mindsafi': '/mindsafi.png',
-      'bookhub': '/bookhub.png',
-      'fitness-booking-devops': '/fitness-booking.jpg',
-      'olearn-mobile': '/olearn.webp',
-      'earthwise-mobile': '/earthwise.jpg',
-      'django-file-mgmt': '/file-management.png',
-      'skillhub': '/skillhub.png',
-      'github-academics': '/academic-projects.png',
-      'honnette-portfolio': '/honnette.png',
-    }
-    return imageMap[slug] || '/tekriders.png'
-  }
-
   const contentSections = [
     project.challenges && project.challenges.length > 0 && {
       title: "The Challenge",

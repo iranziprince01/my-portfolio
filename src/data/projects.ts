@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { mediaUrls } from './media';
 
 export const ProjectSchema = z.object({
   title: z.string(),
@@ -149,7 +150,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/TekRiderz",
       live: "https://github.com/iranziprince01/TekRiderz",
     },
-    images: ["/images/projects/tekriders-1.jpg", "/images/projects/tekriders-2.jpg"],
+    images: ["/tekriders.png"],
     tech: ["Vite", "React", "TypeScript", "Tailwind", "PouchDB", "CouchDB", "Node", "Express", "Service Worker"],
     highlights: ["Offline login + enrolled course metadata", "PWA installable", "Sync on reconnect"],
     outcomes: ["Piloted with learners; improved access in low-connectivity settings"],
@@ -183,7 +184,7 @@ const rawProjects: Project[] = [
     links: {
       live: "https://www.instagram.com/aluconservation/",
     },
-    images: ["/graphics-sowc.png", "/images/projects/graphics-2.jpg"],
+    images: ["/graphics-sowc.png"],
     tech: ["Adobe Photoshop", "Adobe Illustrator", "Canva", "Figma"],
     highlights: ["Professional branding", "Event graphics", "Social media assets"],
     outcomes: ["Created 100+ graphics for various events and platforms", "Enhanced brand visibility for educational institutions"]
@@ -199,7 +200,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/ppea",
       live: "https://probitypartnersea.com/",
     },
-    images: ["/images/projects/ppea-1.jpg", "/images/projects/ppea-2.jpg"],
+    images: ["/PPEA.png"],
     tech: ["Next.js", "Tailwind", "Vercel"],
     highlights: ["Accessible layout", "SEO-ready structure", "Contact integration"],
     outcomes: ["Improved online presence", "Increased client inquiries by 25%"]
@@ -215,7 +216,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/mindsafi",
       live: "https://www.mindsafi.com/",
     },
-    images: ["/images/projects/mindsafi-1.jpg", "/images/projects/mindsafi-2.jpg"],
+    images: ["/mindsafi.png"],
     tech: ["Next.js", "Tailwind"],
     highlights: ["Accessible layout", "Resource library", "Clear service pages"],
     outcomes: ["Increased awareness of mental health services", "Improved accessibility compliance"]
@@ -231,7 +232,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/Book-Hub",
       live: "https://bookhub-alu.netlify.app/?#",
     },
-    images: ["/images/projects/bookhub-1.jpg", "/images/projects/bookhub-2.jpg"],
+    images: ["/bookhub.png"],
     tech: ["Django", "PostgreSQL", "Tailwind", "JavaScript"],
     highlights: ["Role-based access control", "Automated notifications", "Inventory management"],
     outcomes: ["Streamlined library operations", "Reduced manual work by 70%"]
@@ -247,7 +248,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/Fitness-booking-system",
       live: "https://github.com/iranziprince01/Fitness-booking-system",
     },
-    images: ["/images/projects/fitness-1.jpg", "/images/projects/fitness-2.jpg"],
+    images: ["/fitness-booking.jpg"],
     tech: ["Node.js", "Docker", "PostgreSQL", "GitHub Actions", "AWS"],
     highlights: ["Automated CI/CD pipeline", "Containerized deployment", "Monitoring integration"],
     outcomes: ["Reduced deployment time by 80%", "Improved system reliability"]
@@ -263,7 +264,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/mathieumunyakazimoise/Olearn",
       live: "https://github.com/mathieumunyakazimoise/Olearn",
     },
-    images: ["/images/projects/olearn-1.jpg", "/images/projects/olearn-2.jpg"],
+    images: ["/olearn.webp"],
     tech: ["React Native", "Expo", "Firebase"],
     highlights: ["Cross-platform compatibility", "Offline content access", "Progress tracking"],
     outcomes: ["Launched on both iOS and Android", "10,000+ downloads"]
@@ -278,7 +279,7 @@ const rawProjects: Project[] = [
     links: {
       github: "https://github.com/iranziprince01/earthwise",
     },
-    images: ["/images/projects/earthwise-1.jpg", "/images/projects/earthwise-2.jpg"],
+    images: ["/earthwise.jpg"],
     tech: ["React Native", "Firebase", "Google Maps API"],
     highlights: ["Location-based features", "Community engagement", "Impact tracking"],
     outcomes: ["Engaged 500+ users in conservation activities", "Tracked 1000+ environmental actions"]
@@ -294,7 +295,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/File-Management-Application-Dreamers",
       live: "https://github.com/iranziprince01/File-Management-Application-Dreamers",
     },
-    images: ["/images/projects/django-file-1.jpg", "/images/projects/django-file-2.jpg"],
+    images: ["/file-management.png"],
     tech: ["Django", "PostgreSQL", "AWS S3"],
     highlights: ["Secure file sharing", "Role-based permissions", "Version control"],
     outcomes: ["Improved file organization", "Enhanced security measures"]
@@ -310,7 +311,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/skillhub",
       live: "https://iranziprince01.github.io/SkillHub/home.html",
     },
-    images: ["/images/projects/skillhub-1.jpg", "/images/projects/skillhub-2.jpg"],
+    images: ["/skillhub.png"],
     tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
     highlights: ["Course management", "Progress tracking", "Payment integration"],
     outcomes: ["Launched with 20+ courses", "Generated $5K+ in revenue"]
@@ -326,7 +327,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01",
       live: "https://github.com/iranziprince01",
     },
-    images: ["/images/projects/academic-1.jpg"],
+    images: ["/academic-projects.png"],
     tech: ["Various"],
     highlights: ["Diverse project portfolio", "Continuous learning", "Open source contributions"],
     outcomes: ["Demonstrated technical versatility", "Built strong GitHub presence"]
@@ -342,7 +343,7 @@ const rawProjects: Project[] = [
       github: "https://github.com/iranziprince01/divine-portfolio",
       live: "https://divine-portfolio-ten.vercel.app/",
     },
-    images: ["/honnette.png", "/images/projects/honnette-2.jpg"],
+    images: ["/honnette.png"],
     tech: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Font Awesome"],
     highlights: ["Responsive design", "Glass morphism effects", "Interactive timeline", "Women empowerment focus"],
     outcomes: ["Showcased client's impact in women empowerment", "Professional portfolio presentation", "Mobile-first responsive design"]
@@ -372,7 +373,12 @@ const rawProjects: Project[] = [
   }
 ];
 
-export const projects: Project[] = rawProjects.sort((a, b) => b.year - a.year);
+export const projects: Project[] = rawProjects
+  .map((project) => ({
+    ...project,
+    images: mediaUrls(project.images),
+  }))
+  .sort((a, b) => b.year - a.year);
 
 // Validate all projects
 projects.forEach((project, index) => {
