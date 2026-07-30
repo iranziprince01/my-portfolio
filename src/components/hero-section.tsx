@@ -85,11 +85,11 @@ export function HeroSection() {
               <div className="relative w-full max-w-md group">
                 <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-[3px] border-border/80 shadow-xl shadow-primary/10 transition-all duration-300 group-hover:-translate-y-1">
                   <Image
-                    src="/profile.PNG"
+                    src="/Prince.jpg"
                     alt="Prince Iranzi"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-center"
+                    className="object-cover object-top scale-125 origin-top"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
