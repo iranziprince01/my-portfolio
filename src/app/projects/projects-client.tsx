@@ -55,13 +55,13 @@ export function ProjectsClient() {
               placeholder="Search projects..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 h-10 border-border/50 focus:border-primary/50"
+              className="h-11 border-border/50 pl-10 text-base focus:border-primary/50 md:h-10 md:text-sm"
             />
           </div>
           <Button
             variant="outline"
             onClick={() => setShowFilters(!showFilters)}
-            className="sm:w-auto h-10 border-border/50 hover:border-primary/50"
+            className="h-11 border-border/50 hover:border-primary/50 sm:w-auto md:h-10"
           >
             <Filter className="h-4 w-4 mr-2" />
             Filters

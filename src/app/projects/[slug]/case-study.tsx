@@ -27,7 +27,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex items-start gap-4 p-6 bg-card rounded-xl border border-border/60"
+              className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4 sm:gap-4 sm:p-6"
             >
               <div className="mt-1">
                 <div className="h-2 w-2 rounded-full bg-primary" />
@@ -49,7 +49,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 border border-border rounded-xl hover:border-primary/50 transition-colors bg-card"
+              className="rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/50 sm:p-6"
             >
               <CheckCircle className="h-6 w-6 text-primary mb-3" />
               <p className="text-foreground">{highlight}</p>
@@ -81,7 +81,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl border border-primary/20"
+              className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/10 to-accent/10 p-4 sm:p-6"
             >
               <CheckCircle className="h-6 w-6 text-primary mb-3" />
               <p className="text-foreground">{result}</p>
@@ -106,7 +106,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
               <div className="mt-1">
                 <div className="h-2 w-2 rounded-full bg-primary" />
               </div>
-              <p className="text-muted-foreground text-lg">{outcome}</p>
+              <p className="text-base text-muted-foreground sm:text-lg">{outcome}</p>
             </motion.div>
           ))}
         </div>
@@ -119,33 +119,33 @@ export function CaseStudy({ project }: CaseStudyProps) {
       <section className="site-section">
         <div className="site-content">
           <ScrollReveal direction="up">
-            <div className="mb-12">
-              <div className="flex flex-wrap gap-2 mb-6">
+            <div className="mb-8 sm:mb-12">
+              <div className="mb-4 flex flex-wrap gap-2 sm:mb-6">
                 {project.tags.map((tag) => (
                   <Badge key={tag} variant="secondary">
                     {tag}
                   </Badge>
                 ))}
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 font-display">
+              <h1 className="mb-4 font-display text-3xl font-bold text-foreground sm:mb-6 sm:text-5xl lg:text-6xl">
                 {project.title}
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mb-8">
+              <p className="mb-6 max-w-3xl text-base text-muted-foreground sm:mb-8 sm:text-xl">
                 {project.description || project.summary}
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 {(project.links.live || project.links.demo) ? (
                   <Button
                     asChild
                     size="lg"
-                    className="playful-btn px-8"
+                    className="playful-btn w-full px-8 sm:w-auto"
                   >
                     <a
                       href={project.links.live || project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2"
+                      className="flex items-center justify-center gap-2"
                     >
                       <ExternalLink className="h-5 w-5" />
                       Visit Site
@@ -157,7 +157,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-56 overflow-hidden rounded-2xl shadow-2xl sm:h-[500px] lg:h-[600px]">
               <Image
                 src={getProjectImage(project.slug)}
                 alt={project.title}
@@ -178,7 +178,7 @@ export function CaseStudy({ project }: CaseStudyProps) {
         >
           <div className="site-content">
             <ScrollReveal direction="up" delay={0.1}>
-              <h2 className="text-3xl font-bold text-foreground mb-6 font-display">
+              <h2 className="mb-5 font-display text-2xl font-bold text-foreground sm:mb-6 sm:text-3xl">
                 {section.title}
               </h2>
               {section.content}

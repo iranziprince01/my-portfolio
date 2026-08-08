@@ -14,8 +14,8 @@ export function HeroSection() {
   const growIdx = words.findIndex((w) => w === "grow")
 
   return (
-    <section className="relative flex min-h-[calc(100dvh-5rem)] items-center overflow-hidden bg-background">
-      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
+    <section className="relative overflow-hidden bg-background py-10 sm:py-14 lg:flex lg:min-h-[calc(100dvh-5rem)] lg:items-center lg:py-0">
+      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" aria-hidden>
         <div
           className="absolute inset-0"
           style={{
@@ -25,18 +25,24 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/8 rounded-full blur-3xl pointer-events-none" />
+      <div
+        className="pointer-events-none absolute top-1/4 right-1/4 hidden h-96 w-96 rounded-full bg-primary/8 blur-3xl sm:block"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute bottom-1/4 left-1/4 hidden h-80 w-80 rounded-full bg-accent/8 blur-3xl sm:block"
+        aria-hidden
+      />
 
       <div className="site-container relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="text-left space-y-7">
+        <div className="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="space-y-5 text-left sm:space-y-7">
             <ScrollReveal direction="up" delay={0.1}>
-              <div className="space-y-5">
-                <div className="inline-flex px-4 py-2 text-sm font-bold bg-primary text-primary-foreground rounded-full border-2 border-primary/80">
+              <div className="space-y-4 sm:space-y-5">
+                <div className="inline-flex rounded-full border-2 border-primary/80 bg-primary px-3 py-1.5 text-xs font-bold text-primary-foreground sm:px-4 sm:py-2 sm:text-sm">
                   {siteCopy.badge}
                 </div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground font-display leading-[1.1] tracking-tight">
+                <h1 className="font-display text-3xl font-bold leading-[1.12] tracking-tight text-foreground sm:text-5xl lg:text-6xl lg:leading-[1.1]">
                   {words.map((word, i) => {
                     const clean = word.replace(/[.,]/g, "")
                     const highlight = i === launchIdx || i === growIdx
@@ -56,14 +62,14 @@ export function HeroSection() {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-              <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+              <p className="max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {siteCopy.hero.subtitle}
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.3}>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild size="lg" className="text-base px-8 py-6 playful-btn">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button asChild size="lg" className="playful-btn px-8 py-6 text-base">
                   <Link href="/projects">
                     {siteCopy.hero.ctaWork}
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -73,7 +79,7 @@ export function HeroSection() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="text-base px-8 py-6 rounded-xl border-2 font-semibold"
+                  className="rounded-xl border-2 px-8 py-6 text-base font-semibold"
                 >
                   <Link href="/contact">{siteCopy.hero.ctaContact}</Link>
                 </Button>
@@ -83,25 +89,25 @@ export function HeroSection() {
 
           <ScrollReveal direction="up" delay={0.2}>
             <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md group">
-                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-[3px] border-border/80 shadow-xl shadow-primary/10 transition-all duration-300 group-hover:-translate-y-1">
+              <div className="group relative w-full max-w-[220px] sm:max-w-xs lg:max-w-md">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border-[3px] border-border/80 shadow-xl shadow-primary/10 transition-all duration-300 sm:rounded-3xl group-hover:-translate-y-1">
                   <Image
                     src={mediaUrl("/Prince.jpg")}
                     alt="Prince Iranzi"
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 220px, (max-width: 1024px) 320px, 448px"
                     className="object-cover object-top scale-125 origin-top"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
                 </div>
 
-                <div className="absolute -top-3 -right-3 w-16 h-16 border-[3px] border-primary/30 rounded-2xl rotate-6 bg-primary/10 backdrop-blur-sm flex items-center justify-center transition-transform duration-300 group-hover:rotate-0">
-                  <span className="text-sm font-mono text-primary font-bold">{"</>"}</span>
+                <div className="absolute -top-3 -right-3 hidden h-16 w-16 rotate-6 items-center justify-center rounded-2xl border-[3px] border-primary/30 bg-primary/10 backdrop-blur-sm transition-transform duration-300 sm:flex group-hover:rotate-0">
+                  <span className="font-mono text-sm font-bold text-primary">{"</>"}</span>
                 </div>
 
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-primary rounded-2xl border-[3px] border-primary/40 flex items-center justify-center shadow-lg shadow-primary/20">
-                  <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                <div className="absolute -bottom-4 -left-4 hidden h-12 w-12 items-center justify-center rounded-2xl border-[3px] border-primary/40 bg-primary shadow-lg shadow-primary/20 sm:flex">
+                  <div className="h-2 w-2 rounded-full bg-primary-foreground" />
                 </div>
               </div>
             </div>

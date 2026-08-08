@@ -39,10 +39,10 @@ export function Header() {
       }`}
     >
       <div className="site-container">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-foreground font-display hover:text-primary transition-colors">
+          <div className="flex min-w-0 items-center">
+            <Link href="/" className="truncate text-lg font-bold text-foreground font-display transition-colors hover:text-primary sm:text-xl">
               Prince Iranzi
             </Link>
           </div>

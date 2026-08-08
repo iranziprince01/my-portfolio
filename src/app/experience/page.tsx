@@ -56,14 +56,16 @@ export default function ExperiencePage() {
     <>
       <section className="site-section" aria-labelledby="domains-heading">
         <div className="site-content">
-          <div className="text-center max-w-xl mx-auto mb-10">
+          <div className="mx-auto mb-8 max-w-xl text-center sm:mb-10">
             <h1
               id="domains-heading"
-              className="text-3xl sm:text-4xl font-bold text-foreground font-display"
+              className="font-display text-3xl font-bold text-foreground sm:text-4xl"
             >
               {siteCopy.experience.title}
             </h1>
-            <p className="mt-3 text-muted-foreground">{siteCopy.experience.subtitle}</p>
+            <p className="mt-3 text-base text-muted-foreground sm:text-lg">
+              {siteCopy.experience.subtitle}
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {domainAreas.map(({ title, description, Icon }) => (

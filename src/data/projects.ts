@@ -26,6 +26,31 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 const rawProjects: Project[] = [
   {
+    title: "Rwoga Family Association",
+    slug: "rwoga",
+    summary:
+      "Official website for Rwoga Family Association, a student-led nonprofit founded by Congolese students at African Leadership University to support refugee communities.",
+    tags: ["Web", "NGO", "Nonprofit"],
+    role: "Full-stack Developer",
+    year: 2026,
+    links: {
+      live: "https://www.rwoga.org/",
+    },
+    images: ["/rwoga.png"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Vercel"],
+    highlights: [
+      "Hero and storytelling focused on lighting the way for refugee communities",
+      "Clear paths to explore impact, partner, donate, and get involved",
+      "Mission-led pages covering work, engagement, and transparency resources",
+    ],
+    outcomes: [
+      "Gives Rwoga a professional public presence for donors, partners, and community members",
+      "Makes it easier for visitors to understand the mission and take action",
+    ],
+    description:
+      "A modern marketing site for Rwoga Family Association that presents the organization's mission, programs, and calls to action—from exploring impact to partnering and donating—with a clean, mobile-friendly layout.",
+  },
+  {
     title: "Innocent Photos - Photography Website",
     slug: "innocent-photos",
     summary:

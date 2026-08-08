@@ -7,19 +7,21 @@ import { siteCopy } from "@/data/site-copy";
 
 export const metadata: Metadata = generatePageSEO(
   "Projects - Prince Iranzi",
-  "Explore 19+ client projects: nonprofit websites, professional portfolios, PWAs, and full-stack platforms built with Next.js and TypeScript.",
+  "Explore 20+ client projects: nonprofit websites, professional portfolios, PWAs, and full-stack platforms built with Next.js and TypeScript.",
   "/projects"
 );
 
 export default function ProjectsPage() {
   return (
     <>
-      <section className="site-section">
-        <div className="site-content text-center max-w-2xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+      <section className="page-hero">
+        <div className="site-content mx-auto max-w-2xl text-center">
+          <h1 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
             {siteCopy.projects.title}
           </h1>
-          <p className="mt-3 text-muted-foreground">{siteCopy.projects.subtitle}</p>
+          <p className="mt-3 text-base text-muted-foreground sm:text-lg">
+            {siteCopy.projects.subtitle}
+          </p>
         </div>
       </section>
       <section className="site-section-alt">

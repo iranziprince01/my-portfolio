@@ -118,15 +118,30 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
     font-family: "GM Sans", var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
-  html {
-    scroll-behavior: smooth;
+  /* Keep form controls ≥16px on iPhone to prevent focus zoom / layout jump */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    input,
+    textarea,
+    select {
+      font-size: 0.875rem;
+    }
   }
   ul, ol {
     list-style: none;
@@ -161,10 +176,14 @@
     @apply mx-auto w-full max-w-site;
   }
   .site-section {
-    @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-background;
+    @apply py-10 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-background;
   }
   .site-section-alt {
-    @apply py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-muted/50 dark:bg-muted/20;
+    @apply py-10 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-muted/50 dark:bg-muted/20;
+  }
+  /* Compact page title band for inner pages */
+  .page-hero {
+    @apply py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-background;
   }
   .playful-card {
     @apply rounded-2xl border-2 border-border/60 bg-card shadow-sm transition-all duration-200 hover:border-primary/25 hover:-translate-y-0.5;
@@ -228,4 +247,23 @@ section {
 /* Prevent sections from overlapping hero */
 section:not(:first-of-type) {
   margin-top: 0;
+}
+
+/*
+  iPhone Safari zooms the viewport when focused form controls are < 16px.
+  Force 16px on small screens so layout doesn't jump.
+*/
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  input[type="number"] {
+    font-size: 16px !important;
+  }
 }

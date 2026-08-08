@@ -15,9 +15,9 @@ export const metadata: Metadata = generatePageSEO(
 export default function AboutPage() {
   return (
     <>
-      <section className="site-section">
-        <div className="site-content text-center max-w-2xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+      <section className="page-hero">
+        <div className="site-content mx-auto max-w-2xl text-center">
+          <h1 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
             {siteCopy.about.title}
           </h1>
         </div>

@@ -26,11 +26,13 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {siteStats.map((stat, index) => (
                 <ScrollReveal key={index} direction="up" delay={index * 0.05}>
-                  <div className="playful-card text-center p-5">
-                    <div className="text-3xl font-bold text-primary mb-1 font-display">
+                  <div className="playful-card p-4 text-center sm:p-5">
+                    <div className="mb-1 font-display text-2xl font-bold text-primary sm:text-3xl">
                       {stat.value}
                     </div>
-                    <div className="text-sm font-medium text-foreground">{stat.label}</div>
+                    <div className="text-xs font-medium text-foreground sm:text-sm">
+                      {stat.label}
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
@@ -41,11 +43,11 @@ export default function Home() {
         <section className="site-section">
           <div className="site-content">
             <ScrollReveal direction="up">
-              <div className="text-center mb-10 max-w-2xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-display">
+              <div className="mb-8 max-w-2xl mx-auto text-center sm:mb-10">
+                <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
                   {siteCopy.sections.featuredProjects.title}
                 </h2>
-                <p className="mt-3 text-muted-foreground">
+                <p className="mt-3 text-sm text-muted-foreground sm:text-base">
                   {siteCopy.sections.featuredProjects.subtitle}
                 </p>
               </div>
@@ -139,12 +141,12 @@ export default function Home() {
         <section className="site-section-alt">
           <div className="site-content">
             <ScrollReveal direction="up">
-              <div className="text-center p-8 playful-card">
-                <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-5 font-display">
+              <div className="playful-card p-6 text-center sm:p-8">
+                <h2 className="mb-5 font-display text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
                   {siteCopy.sections.cta.title}
                 </h2>
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button asChild size="lg" className="px-6 py-6 playful-btn">
+                <div className="flex flex-col justify-center gap-3 sm:flex-row">
+                  <Button asChild size="lg" className="playful-btn px-6 py-6">
                     <Link href="/contact">
                       {siteCopy.sections.cta.primary}
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -154,7 +156,7 @@ export default function Home() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="px-6 py-6 rounded-xl border-2 font-semibold"
+                    className="rounded-xl border-2 px-6 py-6 font-semibold"
                   >
                     <Link href="/projects">{siteCopy.sections.cta.secondary}</Link>
                   </Button>

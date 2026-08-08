@@ -15,30 +15,34 @@ export const metadata: Metadata = generatePageSEO(
 export default function ContactPage() {
   return (
     <>
-      <section className="site-section">
-        <div className="site-content text-center max-w-xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+      <section className="page-hero">
+        <div className="site-content mx-auto max-w-xl text-center">
+          <h1 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
             {siteCopy.contact.title}
           </h1>
-          <p className="mt-3 text-muted-foreground">{siteCopy.contact.subtitle}</p>
+          <p className="mt-3 text-base text-muted-foreground sm:text-lg">
+            {siteCopy.contact.subtitle}
+          </p>
         </div>
       </section>
 
       <section className="site-section-alt">
         <div className="site-content">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+            <div className="min-w-0">
               <ContactForm />
             </div>
 
-            <div className="space-y-4">
-              <Card className="playful-card p-5 border-0 shadow-none">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-2xl">
+            <div className="min-w-0 space-y-4">
+              <Card className="playful-card border-0 p-4 shadow-none sm:p-5">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="shrink-0 rounded-2xl bg-primary/10 p-3">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="font-semibold text-foreground">princeiranzi4@gmail.com</p>
+                  <div className="min-w-0">
+                    <p className="truncate font-semibold text-foreground">
+                      princeiranzi4@gmail.com
+                    </p>
                     <a
                       href="mailto:princeiranzi4@gmail.com"
                       className="text-sm text-primary hover:underline"
@@ -49,12 +53,12 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              <Card className="playful-card p-5 border-0 shadow-none">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-2xl">
+              <Card className="playful-card border-0 p-4 shadow-none sm:p-5">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="shrink-0 rounded-2xl bg-primary/10 p-3">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold text-foreground">+250 785 961 427</p>
                     <a href="tel:+250785961427" className="text-sm text-primary hover:underline">
                       Call
@@ -63,37 +67,37 @@ export default function ContactPage() {
                 </div>
               </Card>
 
-              <Card className="playful-card p-5 border-0 shadow-none">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-2xl">
+              <Card className="playful-card border-0 p-4 shadow-none sm:p-5">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="shrink-0 rounded-2xl bg-primary/10 p-3">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold text-foreground">Kigali, Rwanda</p>
                     <p className="text-sm text-muted-foreground">Remote clients welcome</p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="playful-card p-5 border-0 shadow-none">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-2xl">
+              <Card className="playful-card border-0 p-4 shadow-none sm:p-5">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="shrink-0 rounded-2xl bg-primary/10 p-3">
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold text-foreground">{siteCopy.contact.response}</p>
                   </div>
                 </div>
               </Card>
 
-              <div className="flex gap-3 pt-2">
+              <div className="flex flex-col gap-3 pt-2 sm:flex-row">
                 <Button asChild variant="outline" className="rounded-xl border-2 font-semibold">
                   <a
                     href="https://github.com/iranziprince01"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="h-4 w-4 mr-2" />
+                    <Github className="mr-2 h-4 w-4" />
                     GitHub
                   </a>
                 </Button>
@@ -103,7 +107,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Linkedin className="h-4 w-4 mr-2" />
+                    <Linkedin className="mr-2 h-4 w-4" />
                     LinkedIn
                   </a>
                 </Button>

@@ -14,11 +14,13 @@ export const metadata: Metadata = generatePageSEO(
 export default function BlogPage() {
   return (
     <section className="site-section">
-      <div className="site-content max-w-xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-3">
+      <div className="site-content mx-auto max-w-xl text-center">
+        <h1 className="mb-3 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
           {siteCopy.blog.title}
         </h1>
-        <p className="text-muted-foreground mb-8">{siteCopy.blog.subtitle}</p>
+        <p className="mb-8 text-base text-muted-foreground sm:text-lg">
+          {siteCopy.blog.subtitle}
+        </p>
         <Card className="playful-card border-0 shadow-none">
           <CardContent className="p-8">
             <p className="text-muted-foreground mb-6">

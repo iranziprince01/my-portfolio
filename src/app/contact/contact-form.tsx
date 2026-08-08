@@ -82,7 +82,7 @@ export function ContactForm() {
 
   return (
     <Card>
-      <CardContent className="p-6">
+      <CardContent className="p-4 sm:p-6">
         {formState.status === 'success' && (
           <div className="mb-6 p-4 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-lg">
             <div className="flex items-center gap-2 text-green-700 dark:text-green-300">
@@ -107,10 +107,10 @@ export function ContactForm() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+              <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
                 Name *
               </label>
               <Input
@@ -118,6 +118,7 @@ export function ContactForm() {
                 name="name"
                 type="text"
                 required
+                autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your full name"
@@ -125,7 +126,7 @@ export function ContactForm() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+              <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
                 Email *
               </label>
               <Input
@@ -133,6 +134,8 @@ export function ContactForm() {
                 name="email"
                 type="email"
                 required
+                autoComplete="email"
+                inputMode="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"

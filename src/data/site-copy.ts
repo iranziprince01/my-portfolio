@@ -50,7 +50,7 @@ export const siteCopy = {
   },
   projects: {
     title: "Projects",
-    subtitle: "19+ client builds · nonprofits, portfolios, and platforms.",
+    subtitle: "20+ client builds · nonprofits, portfolios, and platforms.",
   },
   experience: {
     title: "Beyond client work",
