@@ -30,7 +30,7 @@ export function ExtensionCleanup() {
             }
           })
         }
-      } catch (e) {
+      } catch {
         // Ignore errors
       }
     }
