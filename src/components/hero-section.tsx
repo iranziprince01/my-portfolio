@@ -53,6 +53,11 @@ export function HeroSection() {
                         ) : (
                           clean
                         )}
+                        {i === growIdx && (
+                          <span className="text-primary" aria-hidden="true">
+                            .
+                          </span>
+                        )}
                         {i < words.length - 1 ? " " : ""}
                       </span>
                     )
@@ -98,6 +103,7 @@ export function HeroSection() {
                     sizes="(max-width: 640px) 220px, (max-width: 1024px) 320px, 448px"
                     className="object-cover object-top scale-125 origin-top"
                     priority
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
                 </div>

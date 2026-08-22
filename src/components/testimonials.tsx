@@ -28,10 +28,10 @@ const testimonials: Testimonial[] = [
     rating: 5
   },
   {
-    name: "Jerome Iska",
+    name: "Deborah Kalala Alongi",
     role: "Founder",
-    company: "Talent Bridge Africa",
-    content: "Prince understood our mission from day one. He built a site that explains what Talent Bridge Africa does for students and businesses in a way people actually get. The layout is clear, modern, and ready for the growth we are working toward.",
+    company: "Complexe Scolaire Manasse",
+    content: "Prince built a website that represents our school with pride. Parents can easily find admissions information, programs, and contact details, and the mobile experience works beautifully for families in Kinshasa. He listened carefully, understood our vision, and delivered a professional site we are happy to share.",
     rating: 5
   },
   {

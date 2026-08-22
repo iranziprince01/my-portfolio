@@ -2,7 +2,7 @@
 
 import type { ReactElement } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
+import { LazyImage } from "@/components/ui/lazy-image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, CheckCircle } from "lucide-react"
@@ -158,13 +158,12 @@ export function CaseStudy({ project }: CaseStudyProps) {
 
           <ScrollReveal direction="up" delay={0.2}>
             <div className="relative h-56 overflow-hidden rounded-2xl shadow-2xl sm:h-[500px] lg:h-[600px]">
-              <Image
+              <LazyImage
                 src={getProjectImage(project.slug)}
                 alt={project.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                 className="object-cover"
-                priority
               />
             </div>
           </ScrollReveal>

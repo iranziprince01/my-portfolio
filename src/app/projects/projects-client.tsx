@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react";
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/lazy-image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -130,7 +130,7 @@ export function ProjectsClient() {
             <Card key={project.slug} className="group h-full flex flex-col overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-xl bg-card/50 backdrop-blur-sm pt-0">
               {/* Project Thumbnail - flush to top */}
               <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-xl">
-                <Image
+                <LazyImage
                   src={getProjectImage(project.slug)}
                   alt={project.title}
                   fill

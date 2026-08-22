@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
+import { LazyImage } from "@/components/ui/lazy-image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -23,7 +23,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
     <ScrollReveal delay={index * 0.05} direction="up">
       <Card className="group h-full flex flex-col overflow-hidden border-2 border-border/50 hover:border-primary/30 transition-all duration-200 shadow-sm hover:-translate-y-0.5 bg-card pt-0 rounded-2xl">
         <div className="relative h-52 bg-gradient-to-br from-muted/50 to-muted/30 overflow-hidden rounded-t-2xl">
-          <Image
+          <LazyImage
             src={getProjectImage(project.slug)}
             alt={project.title}
             fill
