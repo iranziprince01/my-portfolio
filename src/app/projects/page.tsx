@@ -7,7 +7,7 @@ import { siteCopy } from "@/data/site-copy";
 
 export const metadata: Metadata = generatePageSEO(
   "Projects - Prince Iranzi",
-  "Explore 20+ client projects: nonprofit websites, professional portfolios, PWAs, and full-stack platforms built with Next.js and TypeScript.",
+  "Explore 22+ client projects: nonprofit websites, professional portfolios, PWAs, and full-stack platforms built with Next.js and TypeScript.",
   "/projects"
 );
 

@@ -26,7 +26,9 @@ export const media = {
   "/skillhub.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/skillhub.png",
   "/Talent Bridge Africa.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/Talent%20Bridge%20Africa.png",
   "/tekriders.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/tekriders.png",
-  "/rwoga.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/rwoga.png"
+  "/rwoga.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/rwoga.png",
+  "/CSM.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/CSM.png",
+  "/FESL.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/FESL.png"
 } as const
 
 export type MediaPath = keyof typeof media

@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
     current: true,
     description: "Providing full-stack development and digital marketing services to clients across East Africa and internationally. Specializing in Next.js websites, web applications, and growth marketing.",
     achievements: [
-      "Delivered 20+ client websites, web apps, and mobile projects for nonprofits, founders, and organizations",
+      "Delivered 22+ client websites, web apps, and mobile projects for nonprofits, founders, and organizations",
       "Drove measurable growth for clients, including 25% increase in inquiries for PPEA and stronger brand reach via social campaigns",
       "Built offline-first PWA piloted with 50+ learners in low-connectivity settings",
       "Launched 2026 production sites for Lumina Bridge Foundation, Talent Bridge Africa, and gospel artist Byishimo Patrick",

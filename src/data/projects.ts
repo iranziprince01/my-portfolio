@@ -26,6 +26,56 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 const rawProjects: Project[] = [
   {
+    title: "Fresh Edges Services Ltd",
+    slug: "fresh-edges-services",
+    summary:
+      "Marketing website for Fresh Edges Services Ltd, a property care company offering reliable maintenance and facility services with a clear path to request quotes and explore offerings.",
+    tags: ["Web", "Corporate"],
+    role: "Full-stack Developer",
+    year: 2026,
+    links: {
+      live: "https://fresh-edges-services.vercel.app/",
+    },
+    images: ["/FESL.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: [
+      "Service-focused homepage highlighting reliable property care",
+      "Clear CTAs for inquiries and customer engagement",
+      "Clean, mobile-friendly layout built for trust and conversions",
+    ],
+    outcomes: [
+      "Gives Fresh Edges a professional online presence for new client inquiries",
+      "Makes services and contact paths easy to find on any device",
+    ],
+    description:
+      "A modern business site for Fresh Edges Services Ltd that presents property care offerings, builds trust with a polished brand experience, and guides visitors toward getting in touch.",
+  },
+  {
+    title: "Complexe Scolaire Manasse",
+    slug: "complexe-scolaire-manasse",
+    summary:
+      "Official school website for Complexe Scolaire Manasse in Mont-Amba, Kinshasa, presenting programs, admissions, and school information for parents and students.",
+    tags: ["Web", "Education"],
+    role: "Full-stack Developer",
+    year: 2026,
+    links: {
+      live: "https://complexe-scolaire-manasse.vercel.app/",
+    },
+    images: ["/CSM.png"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    highlights: [
+      "School identity and program information tailored for families in Kinshasa",
+      "Structured pages for admissions, contact, and key school details",
+      "Responsive design optimized for parents browsing on mobile",
+    ],
+    outcomes: [
+      "Helps parents and students discover Complexe Scolaire Manasse online",
+      "Centralizes school information and contact in one professional site",
+    ],
+    description:
+      "A bilingual-friendly school website for Complexe Scolaire Manasse that showcases the institution's identity, programs, and enrollment information with a clear, accessible layout.",
+  },
+  {
     title: "Rwoga Family Association",
     slug: "rwoga",
     summary:

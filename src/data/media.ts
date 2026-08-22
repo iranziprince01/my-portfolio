@@ -4,6 +4,8 @@ export { BLOB_HOST, media, type MediaPath } from "./media-urls"
 
 /** Local path keys mapped to project slugs (resolved via mediaUrl). */
 export const projectImageBySlug: Record<string, MediaPath> = {
+  "fresh-edges-services": "/FESL.png",
+  "complexe-scolaire-manasse": "/CSM.png",
   rwoga: "/rwoga.png",
   "innocent-photos": "/innocent_photos.png",
   "lumina-bridge-foundation": "/lbf.png",
