@@ -104,7 +104,7 @@ const rawProjects: Project[] = [
     role: "Full-stack Developer",
     year: 2026,
     links: {
-      live: "https://talent-bridge-africa.vercel.app/",
+      live: "https://tbawork.com/",
     },
     images: ["/Talent Bridge Africa.png"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
