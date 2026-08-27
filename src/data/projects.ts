@@ -34,7 +34,7 @@ const rawProjects: Project[] = [
     role: "Full-stack Developer",
     year: 2026,
     links: {
-      live: "https://fresh-edges-services.vercel.app/",
+      live: "https://enviro-horizon-solutions.vercel.app/",
     },
     images: ["/FESL.png"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
