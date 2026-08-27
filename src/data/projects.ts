@@ -26,10 +26,10 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 const rawProjects: Project[] = [
   {
-    title: "Fresh Edges Services Ltd",
+    title: "Enviro Horizon Solutions",
     slug: "fresh-edges-services",
     summary:
-      "Marketing website for Fresh Edges Services Ltd, a property care company offering reliable maintenance and facility services with a clear path to request quotes and explore offerings.",
+      "Marketing website for Enviro Horizon Solutions, a property care company offering reliable maintenance and facility services with a clear path to request quotes and explore offerings.",
     tags: ["Web", "Corporate"],
     role: "Full-stack Developer",
     year: 2026,
@@ -44,11 +44,11 @@ const rawProjects: Project[] = [
       "Clean, mobile-friendly layout built for trust and conversions",
     ],
     outcomes: [
-      "Gives Fresh Edges a professional online presence for new client inquiries",
+      "Gives Enviro Horizon Solutions a professional online presence for new client inquiries",
       "Makes services and contact paths easy to find on any device",
     ],
     description:
-      "A modern business site for Fresh Edges Services Ltd that presents property care offerings, builds trust with a polished brand experience, and guides visitors toward getting in touch.",
+      "A modern business site for Enviro Horizon Solutions that presents property care offerings, builds trust with a polished brand experience, and guides visitors toward getting in touch.",
   },
   {
     title: "Complexe Scolaire Manasse",
