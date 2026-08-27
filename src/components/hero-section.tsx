@@ -101,7 +101,7 @@ export function HeroSection() {
                     alt="Prince Iranzi"
                     fill
                     sizes="(max-width: 640px) 220px, (max-width: 1024px) 320px, 448px"
-                    className="object-cover object-top scale-125 origin-top"
+                    className="object-cover object-top"
                     priority
                     decoding="async"
                   />
