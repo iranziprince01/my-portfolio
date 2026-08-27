@@ -21,6 +21,7 @@ export const media = {
   "/Patrick.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/Patrick.png",
   "/PPEA.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/PPEA.png",
   "/Prince.jpg": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/Prince.jpg",
+  "/Prince2.jpg": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/Prince2.jpg",
   "/profile.PNG": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/profile.PNG",
   "/sango.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/sango.png",
   "/skillhub.png": "https://e8zjl9cczfol7u0a.public.blob.vercel-storage.com/portfolio/skillhub.png",

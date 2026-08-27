@@ -78,6 +78,27 @@ export const skills: Skill[] = [
     description: "Backend development with Django, Flask, and data processing"
   },
   {
+    name: "C++",
+    category: "languages",
+    level: "expert",
+    years: 8,
+    description: "Systems and application programming with strong fundamentals in memory and performance"
+  },
+  {
+    name: "MVB",
+    category: "languages",
+    level: "expert",
+    years: 8,
+    description: "Long-term experience building and maintaining applications with MVB"
+  },
+  {
+    name: "Java",
+    category: "languages",
+    level: "expert",
+    years: 8,
+    description: "Object-oriented development for backend services and cross-platform applications"
+  },
+  {
     name: "Django",
     category: "backend",
     level: "advanced",
