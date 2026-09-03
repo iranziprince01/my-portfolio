@@ -34,7 +34,7 @@ const rawProjects: Project[] = [
     role: "Full-stack Developer",
     year: 2026,
     links: {
-      live: "https://enviro-horizon-solutions.vercel.app/",
+      live: "https://www.enviroworkssinc.ca/",
     },
     images: ["/FESL.png"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -44,11 +44,11 @@ const rawProjects: Project[] = [
       "Clean, mobile-friendly layout built for trust and conversions",
     ],
     outcomes: [
-      "Gives Enviro Horizon Solutions a professional online presence for new client inquiries",
+      "Gives EnviroWorks Services Inc a professional online presence for new client inquiries",
       "Makes services and contact paths easy to find on any device",
     ],
     description:
-      "A modern business site for Enviro Horizon Solutions that presents property care offerings, builds trust with a polished brand experience, and guides visitors toward getting in touch.",
+      "A modern business site for EnviroWorks Services Inc that presents property care offerings, builds trust with a polished brand experience, and guides visitors toward getting in touch.",
   },
   {
     title: "Complexe Scolaire Manasse",
