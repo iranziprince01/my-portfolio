@@ -26,10 +26,10 @@ export type Project = z.infer<typeof ProjectSchema>;
 
 const rawProjects: Project[] = [
   {
-    title: "Enviro Horizon Solutions",
+    title: "EnviroWorks Services Inc",
     slug: "fresh-edges-services",
     summary:
-      "Marketing website for Enviro Horizon Solutions, a property care company offering reliable maintenance and facility services with a clear path to request quotes and explore offerings.",
+      "Marketing website for EnviroWorks Services Inc, a property care company offering reliable maintenance and facility services with a clear path to request quotes and explore offerings.",
     tags: ["Web", "Corporate"],
     role: "Full-stack Developer",
     year: 2026,
