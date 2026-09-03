@@ -34,7 +34,7 @@ const rawProjects: Project[] = [
     role: "Full-stack Developer",
     year: 2026,
     links: {
-      live: "https://www.enviroworkssinc.ca/",
+      live: "https://www.enviroworksinc.ca/",
     },
     images: ["/FESL.png"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
